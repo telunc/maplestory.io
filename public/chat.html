@@ -34,9 +34,9 @@
         if(error != null){
           console.log(error);
         }else{
-          client.action('createChatRoom', {name: 'defaultRoom'}, function(data){
+          client.action('subscribeWorld', {name: 'khroa'}, function(data){
             console.log(data)
-            client.roomAdd("defaultRoom", function(error){ if(error){ console.log(error);} });
+            client.roomAdd("Khroa", function(error){ if(error){ console.log(error);} });
             document.getElementById("name").innerHTML = "<span style=\"color:#" + intToARGB(hashCode(client.id)) + "\">" + client.id + "</span>";
           });
         }

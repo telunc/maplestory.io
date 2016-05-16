@@ -20,7 +20,7 @@ exports['default'] = {
         // websocket Server Options:
         server: {
           // authorization: null,
-          // pathname:      '/primus',
+           pathname:      '/wss',
           // parser:        'JSON',
           // transformer:   'websockets',
           // plugin:        {},

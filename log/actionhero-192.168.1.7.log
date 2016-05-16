@@ -1,0 +1,799 @@
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:03:04.213Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:03:04.370Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:03:04.381Z"}
+{"level":"notice","message":"pid: 5004","timestamp":"2016-05-16T09:03:04.905Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:03:04.912Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"2016-05-16T09:03:04.925Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:03:04.949Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:03:06.764Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:03:06.768Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:03:53.047Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:03:53.177Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:03:53.184Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:03:53.710Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:03:53.711Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:03:53.722Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:03:53.743Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:03:55.627Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:03:55.627Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:03:59.308Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:03:59.316Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:04:20.631Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:04:20.635Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:04:20.648Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:04:20.651Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:04:20.659Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:04:20.672Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:04:20.751Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:04:20.753Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:04:20.758Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:04:20.776Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:04:20.777Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:04:20.782Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:04:20.784Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:04:22.086Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:04:22.087Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:04:22.092Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:04:31.086Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:04:31.088Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:04:31.089Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:04:31.090Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:04:31.095Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:04:31.101Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:04:31.176Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:04:31.178Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:04:31.181Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:04:31.193Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:04:31.193Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:04:31.198Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:04:31.201Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:04:32.546Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:04:32.547Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:04:32.547Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:04:36.546Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:04:36.546Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:04:36.547Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:04:36.547Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:04:36.551Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:04:36.555Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:04:36.615Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:04:36.617Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:04:36.621Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:04:36.631Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:04:36.631Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:04:36.638Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:04:36.640Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:04:37.997Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:04:37.998Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:04:37.999Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:04:51.998Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:04:51.998Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:04:51.999Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:04:51.999Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:04:52.003Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:04:52.080Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:04:52.090Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:04:52.092Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:04:52.095Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:04:52.108Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:04:52.109Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:04:52.113Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:04:52.116Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:04:53.399Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:04:53.400Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:04:53.400Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:05:08.098Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:05:16.309Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:07:27.412Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:07:27.418Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:09:39.582Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":4,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:09:39.604Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T09:09:52.674Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:09:53.244Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":3,"error":"Error: room exists","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:09:53.252Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\servers\\websocket.js) ***","timestamp":"2016-05-16T09:10:18.399Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:10:18.399Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:10:18.400Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:10:18.400Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:10:18.404Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:10:18.408Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:10:18.493Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:10:18.494Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:10:18.498Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:10:18.508Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:10:18.508Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:10:18.513Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:10:18.514Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:10:20.240Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:10:20.241Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:10:20.241Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:10:26.746Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T09:11:13.525Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\servers\\websocket.js) ***","timestamp":"2016-05-16T09:11:25.240Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:11:25.241Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:11:25.242Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:11:25.243Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:11:25.248Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:11:25.253Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:11:25.346Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:11:25.348Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:11:25.353Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:11:25.363Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:11:25.364Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:11:25.370Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:11:25.372Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:11:27.571Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:11:27.572Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:11:27.572Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:11:34.643Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T09:12:12.444Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:12:29.678Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T09:13:04.679Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:13:55.260Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T09:14:35.391Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:14:49.620Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T09:14:49.627Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:18:06.575Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:18:06.575Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:18:06.576Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:18:06.577Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:18:06.581Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:18:06.585Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:18:06.665Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:18:06.667Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:18:06.671Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:18:06.678Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:18:06.679Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:18:06.685Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:18:06.687Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:18:08.856Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:18:08.857Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:18:08.857Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:18:11.855Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:18:11.855Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:18:11.856Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:18:11.857Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:18:11.863Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:18:11.869Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:18:11.958Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:18:11.961Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:18:11.971Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:18:11.983Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:18:11.984Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:18:11.989Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:18:11.991Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:18:13.954Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:18:13.955Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:18:13.955Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:19:03.419Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":2,"error":"Error: room exists","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:19:03.427Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:22:24.532Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":3,"error":"Error: room exists","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:22:24.540Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\servers\\websocket.js) ***","timestamp":"2016-05-16T09:25:04.955Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:25:04.955Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:25:04.956Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:25:04.957Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:25:04.959Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:25:04.962Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:25:05.037Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:25:05.038Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:25:05.042Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:25:05.050Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:25:05.053Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:25:05.059Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:25:05.060Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:25:07.734Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:25:07.735Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:25:07.735Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:25:08.265Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":2,"error":"Error: room exists","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:25:08.273Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:25:11.338Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":2,"error":"Error: room exists","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:25:11.342Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T09:32:17.733Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:32:17.734Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:32:17.736Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:32:17.738Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:32:17.740Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:32:17.744Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:32:17.855Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:32:17.858Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:32:17.863Z"}
+{"level":"notice","message":"pid: 9468","timestamp":"2016-05-16T09:32:17.883Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:32:17.886Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:32:17.899Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:32:17.907Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:32:17.911Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:32:20.477Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:32:20.481Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:32:20.482Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:36:02.448Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\",\"apiVersion\":1}","duration":3,"error":"Error: room exists","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:36:02.458Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:41:34.689Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:41:34.790Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:41:34.798Z"}
+{"level":"notice","message":"pid: 19832","timestamp":"2016-05-16T09:41:35.181Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:41:35.182Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:41:35.184Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:41:35.194Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:41:35.222Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:41:37.420Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:41:37.426Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:41:37.437Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":4,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:41:37.443Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:41:37.451Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:41:37.457Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:42:10.420Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:42:10.515Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:42:10.528Z"}
+{"level":"notice","message":"pid: 20804","timestamp":"2016-05-16T09:42:10.852Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:42:10.853Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:42:10.854Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:42:10.860Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:42:10.878Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:42:12.881Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:42:12.893Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:42:12.904Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:42:12.907Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:42:12.915Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:42:12.922Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:43:13.875Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:43:13.875Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:43:13.876Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:43:13.877Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:43:13.880Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:43:13.883Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:43:13.987Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:43:13.991Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:43:13.995Z"}
+{"level":"notice","message":"pid: 20804","timestamp":"2016-05-16T09:43:14.015Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:43:14.016Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:43:14.017Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:43:14.024Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:43:14.027Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:43:16.646Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:43:16.650Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:43:16.650Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:43:55.707Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:43:55.798Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:43:55.806Z"}
+{"level":"notice","message":"pid: 7620","timestamp":"2016-05-16T09:43:56.051Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:43:56.051Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:43:56.052Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:43:56.059Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:43:56.073Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:43:58.016Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:43:58.020Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:43:58.022Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:43:58.031Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:43:58.039Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":1,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:43:58.041Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:45:03.007Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:45:03.007Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:45:03.008Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:45:03.008Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:45:03.011Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:45:03.014Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:45:03.126Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:45:03.130Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:45:03.134Z"}
+{"level":"notice","message":"pid: 7620","timestamp":"2016-05-16T09:45:03.156Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:45:03.158Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:45:03.159Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:45:03.167Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:45:03.170Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:45:05.515Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:45:05.520Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:45:05.520Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:45:38.512Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:45:38.513Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:45:38.514Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:45:38.514Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:45:38.516Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:45:38.521Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:45:38.595Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:45:38.596Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:45:38.601Z"}
+{"level":"notice","message":"pid: 7620","timestamp":"2016-05-16T09:45:38.609Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:45:38.610Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:45:38.610Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:45:38.615Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:45:38.616Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:45:40.999Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:45:41.002Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:45:41.002Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:45:44.769Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:45:44.853Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:45:44.861Z"}
+{"level":"notice","message":"pid: 7892","timestamp":"2016-05-16T09:45:45.161Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:45:45.162Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:45:45.163Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:45:45.169Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:45:45.183Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:45:47.221Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:45:47.224Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:45:47.234Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:45:47.239Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:45:47.242Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:45:47.246Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:46:17.829Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:46:17.927Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:46:17.935Z"}
+{"level":"notice","message":"pid: 20944","timestamp":"2016-05-16T09:46:18.247Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:46:18.247Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:46:18.248Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:46:18.254Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:46:18.272Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:46:20.562Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:46:20.566Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:46:48.748Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:46:48.831Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:46:48.839Z"}
+{"level":"notice","message":"pid: 10436","timestamp":"2016-05-16T09:46:49.159Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:46:49.160Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:46:49.161Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:46:49.169Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:46:49.190Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:46:51.001Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:46:51.004Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:47:05.921Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:47:05.994Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:47:06.001Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:47:06.302Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:47:06.303Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:47:06.304Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:47:06.310Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:47:06.323Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:47:08.081Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:47:08.086Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:47:22.080Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:47:22.081Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:47:22.082Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:47:22.084Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:47:22.087Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:47:22.091Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:47:22.183Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:47:22.185Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:47:22.190Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:47:22.204Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:47:22.206Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:47:22.207Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:47:22.212Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:47:22.214Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:47:24.412Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:47:24.418Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:47:24.427Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:47:24.430Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:47:24.440Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:47:24.441Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:47:24.443Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:47:54.402Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:47:54.403Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:47:54.404Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:47:54.405Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:47:54.408Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:47:54.412Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:47:54.507Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:47:54.509Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:47:54.514Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:47:54.522Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:47:54.523Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:47:54.524Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:47:54.528Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:47:54.530Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:47:56.137Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:47:56.139Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:47:56.139Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:48:11.139Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:48:11.140Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:48:11.141Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:48:11.142Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:48:11.147Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:48:11.151Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:48:11.259Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:48:11.261Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:48:11.264Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:48:11.279Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:48:11.280Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:48:11.281Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:48:11.288Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:48:11.290Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:48:13.703Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:48:13.705Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:48:13.705Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:48:43.702Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:48:43.702Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:48:43.706Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:48:43.707Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:48:43.710Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:48:43.732Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:48:43.819Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:48:43.821Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:48:43.825Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:48:43.835Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:48:43.836Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:48:43.836Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:48:43.840Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:48:43.843Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:48:45.865Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:48:45.868Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:48:45.868Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:50:02.866Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:50:02.866Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:50:02.867Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:50:02.868Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:50:02.870Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:50:02.875Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:50:02.982Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:50:02.984Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:50:02.988Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:50:03.001Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:50:03.002Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:50:03.003Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:50:03.007Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:50:03.010Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:50:05.013Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:50:05.015Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:50:05.016Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:50:22.014Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:50:22.014Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:50:22.014Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:50:22.015Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:50:22.019Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:50:22.024Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:50:22.095Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:50:22.098Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:50:22.102Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:50:22.112Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:50:22.112Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:50:22.113Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:50:22.117Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:50:22.119Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:50:24.534Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:50:24.536Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:50:24.536Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:51:23.535Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:51:23.536Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:51:23.537Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:51:23.538Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:51:23.542Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:51:23.547Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:51:23.674Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:51:23.677Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:51:23.681Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:51:23.699Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:51:23.700Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:51:23.701Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:51:23.708Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:51:23.711Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:51:25.753Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:51:25.756Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:51:25.756Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:51:43.753Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:51:43.753Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:51:43.754Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:51:43.754Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:51:43.758Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:51:43.763Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:51:43.890Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:51:43.893Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:51:43.897Z"}
+{"level":"notice","message":"pid: 21220","timestamp":"2016-05-16T09:51:43.906Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:51:43.907Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:51:43.908Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:51:43.912Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:51:43.914Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:51:46.156Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:51:46.158Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:51:46.158Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:52:40.344Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:52:40.425Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:52:40.433Z"}
+{"level":"notice","message":"pid: 21432","timestamp":"2016-05-16T09:52:40.752Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:52:40.753Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:52:40.754Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:52:40.760Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:52:40.773Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:52:42.525Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:52:42.530Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:52:46.408Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:52:46.411Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:52:53.386Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:52:53.390Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:53:17.526Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:53:17.526Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:53:17.527Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:53:17.528Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:53:17.534Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:53:17.546Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:53:17.632Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:53:17.634Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:53:17.639Z"}
+{"level":"notice","message":"pid: 21432","timestamp":"2016-05-16T09:53:17.651Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:53:17.651Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:53:17.652Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:53:17.657Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:53:17.660Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:53:19.520Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:53:19.523Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:53:19.524Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:54:26.722Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:54:26.803Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:54:26.813Z"}
+{"level":"notice","message":"pid: 6544","timestamp":"2016-05-16T09:54:27.113Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:54:27.115Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:54:27.116Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:54:27.124Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:54:27.141Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:54:28.735Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:54:28.739Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:54:38.393Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:54:38.399Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:54:50.388Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":1,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:54:50.391Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T09:54:56.736Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T09:54:56.737Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T09:54:56.738Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T09:54:56.738Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T09:54:56.742Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T09:54:56.746Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:54:56.840Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:54:56.842Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:54:56.845Z"}
+{"level":"notice","message":"pid: 6544","timestamp":"2016-05-16T09:54:56.861Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:54:56.862Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:54:56.863Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:54:56.870Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:54:56.872Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:54:58.493Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:54:58.496Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T09:54:58.496Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:55:02.273Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T09:56:24.996Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T09:56:25.057Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T09:56:25.064Z"}
+{"level":"notice","message":"pid: 20500","timestamp":"2016-05-16T09:56:25.362Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T09:56:25.363Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T09:56:25.364Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T09:56:25.371Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T09:56:25.386Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T09:56:27.129Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T09:56:27.134Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:56:30.133Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T09:57:11.384Z"}
+{"to":"127.0.0.1","action":"createChatRoom","params":"{\"name\":\"defaultRoom\",\"action\":\"createChatRoom\"}","duration":1,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T09:57:11.387Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T09:57:13.863Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:03:51.062Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:03:51.615Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"name\":\"khroa\",\"action\":\"subscribeWorld\"}","duration":1,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:03:51.625Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T10:04:39.135Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:04:39.136Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:04:39.137Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:04:39.137Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:04:39.140Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:04:39.143Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:04:39.256Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:04:39.261Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:04:39.269Z"}
+{"level":"notice","message":"pid: 20500","timestamp":"2016-05-16T10:04:39.288Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:04:39.289Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:04:39.290Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:04:39.295Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:04:39.298Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:04:41.297Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:04:41.299Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:04:41.299Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:04:59.071Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:04:59.080Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T10:07:17.294Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:07:17.294Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:07:17.294Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:07:17.295Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:07:17.299Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:07:17.303Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:07:17.373Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:07:17.374Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:07:17.378Z"}
+{"level":"notice","message":"pid: 20500","timestamp":"2016-05-16T10:07:17.386Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:07:17.386Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:07:17.387Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:07:17.390Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:07:17.392Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:07:19.114Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:07:19.117Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:07:19.118Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:07:26.410Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:07:26.433Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:07:37.588Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:07:37.648Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:07:37.655Z"}
+{"level":"notice","message":"pid: 22352","timestamp":"2016-05-16T10:07:37.929Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:07:37.929Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:07:37.930Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:07:37.936Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:07:37.951Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:07:39.852Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:07:39.860Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:07:39.863Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:07:39.876Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\khroa.js) ***","timestamp":"2016-05-16T10:14:10.861Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:14:10.862Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:14:10.864Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:14:10.865Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:14:10.868Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:14:10.872Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:14:10.983Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:14:10.987Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:14:10.992Z"}
+{"level":"notice","message":"pid: 22352","timestamp":"2016-05-16T10:14:11.019Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:14:11.021Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:14:11.023Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:14:11.033Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:14:11.035Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:14:12.997Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:14:13.002Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:14:13.004Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:14:25.743Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:14:25.753Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:14:35.432Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:14:35.563Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:14:35.575Z"}
+{"level":"notice","message":"pid: 6072","timestamp":"2016-05-16T10:14:36.065Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:14:36.065Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:14:36.066Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:14:36.073Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:14:36.094Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:14:38.531Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:14:38.535Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:14:38.537Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:14:38.541Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\servers\\websocket.js) ***","timestamp":"2016-05-16T10:17:05.523Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:17:05.523Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:17:05.524Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:17:05.525Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:17:05.527Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:17:05.530Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:17:05.614Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:17:05.617Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:17:05.624Z"}
+{"level":"notice","message":"pid: 6072","timestamp":"2016-05-16T10:17:05.636Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:17:05.638Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:17:05.639Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:17:05.645Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:17:05.647Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:17:07.920Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:17:07.934Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:17:07.935Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:17:08.495Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:17:08.504Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:17:09.938Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:17:09.942Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:17:14.086Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:17:14.091Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:17:24.387Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:17:24.394Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:17:36.962Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:17:36.964Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:17:40.705Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:17:40.711Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:21:36.134Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:21:36.247Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:21:36.261Z"}
+{"level":"notice","message":"pid: 20620","timestamp":"2016-05-16T10:21:36.568Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:21:36.569Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:21:36.570Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:21:36.578Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:23:56.872Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:23:56.958Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:23:56.967Z"}
+{"level":"notice","message":"pid: 21908","timestamp":"2016-05-16T10:23:57.307Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:23:57.308Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: khroa","timestamp":"2016-05-16T10:23:57.309Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:23:57.317Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:23:57.334Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:23:59.447Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:23:59.455Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:23:59.580Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:23:59.587Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:24:06.267Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:24:06.277Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:24:18.554Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:24:18.995Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:24:19.000Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:24:27.112Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:30:48.227Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:30:48.313Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:30:48.321Z"}
+{"level":"notice","message":"pid: 15088","timestamp":"2016-05-16T10:30:48.569Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:30:48.570Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:30:48.572Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:30:48.572Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:30:48.573Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:30:48.573Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:30:48.573Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:30:48.574Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:30:48.580Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:30:48.594Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:30:50.479Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:30:50.482Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:31:20.760Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:31:20.846Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:31:20.855Z"}
+{"level":"notice","message":"pid: 20772","timestamp":"2016-05-16T10:31:21.202Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:31:21.203Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:31:21.204Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:31:21.204Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:31:21.205Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:31:21.205Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:31:21.206Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:31:21.206Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:31:21.214Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:31:21.230Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:31:23.304Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:31:23.307Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:31:37.164Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:31:37.244Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:31:37.259Z"}
+{"level":"notice","message":"pid: 15040","timestamp":"2016-05-16T10:31:37.601Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:31:37.602Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:31:37.603Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:31:37.604Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:31:37.604Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:31:37.605Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:31:37.605Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:31:37.606Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:31:37.616Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:31:37.632Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:31:39.609Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:31:39.612Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:31:58.226Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:31:58.312Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:31:58.327Z"}
+{"level":"notice","message":"pid: 22176","timestamp":"2016-05-16T10:31:58.600Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:31:58.601Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:31:58.602Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:31:58.602Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:31:58.602Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:31:58.603Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:31:58.603Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:31:58.603Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:31:58.611Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:31:58.624Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:32:00.690Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:32:00.693Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:33:29.046Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:33:29.160Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:33:29.169Z"}
+{"level":"notice","message":"pid: 22024","timestamp":"2016-05-16T10:33:29.486Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:33:29.487Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:33:29.487Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:33:29.489Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:33:29.489Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:33:29.490Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:33:29.490Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:33:29.491Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:33:29.497Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:33:29.513Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:33:31.438Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:33:31.447Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:33:37.271Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:33:37.279Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:34:05.646Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:34:06.149Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:34:06.161Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:34:50.252Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:34:50.368Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:34:50.378Z"}
+{"level":"notice","message":"pid: 18748","timestamp":"2016-05-16T10:34:50.714Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:34:50.715Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:34:50.717Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:34:50.717Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:34:50.718Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:34:50.718Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:34:50.718Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:34:50.719Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:34:50.728Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:34:50.746Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:34:53.004Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:34:53.007Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:34:53.020Z"}
+{"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:34:53.023Z"}
