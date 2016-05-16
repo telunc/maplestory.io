@@ -1,0 +1,22 @@
+{
+  "author"      : "YOU <YOU@example.com>",
+  "name"        : "my_actionhero_project",
+  "description" : "my actionhero project",
+  "version"     : "0.0.1",
+  "engines"     : {
+    "node": ">=0.10.0"
+  },
+  "dependencies" : {
+    "actionhero" : "13.4.0",
+    "ws"         : "latest"
+  },
+  "devDependencies" : {
+    "mocha"  : "latest",
+    "should" : "latest"
+  },
+  "scripts" : {
+    "start"        : "actionhero start",
+    "actionhero"   : "actionhero",
+    "test"         : "NODE_ENV=test mocha"
+  }
+}
