@@ -797,3 +797,524 @@
 {"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:34:53.007Z"}
 {"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:34:53.020Z"}
 {"to":"127.0.0.1","action":"subscribeWorld","params":"{\"action\":\"subscribeWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ websocket ]","timestamp":"2016-05-16T10:34:53.023Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:36:18.742Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:48:34.347Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:48:34.445Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:48:34.452Z"}
+{"level":"notice","message":"pid: 6708","timestamp":"2016-05-16T10:48:34.710Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:48:34.711Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:48:34.712Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:48:34.712Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:48:34.713Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:48:34.713Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:48:34.713Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:48:34.713Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:48:34.719Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:48:34.736Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:48:37.015Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:48:37.040Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:48:37.644Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:49:36.331Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:49:36.886Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:50:38.261Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:50:38.680Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:50:42.369Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:50:42.439Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:50:42.445Z"}
+{"level":"notice","message":"pid: 20192","timestamp":"2016-05-16T10:50:42.690Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:50:42.690Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:50:42.691Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:50:42.691Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:50:42.692Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:50:42.692Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:50:42.692Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:50:42.692Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:50:42.699Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:50:42.710Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:50:44.426Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:50:44.432Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:50:44.459Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:50:44.477Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:50:44.909Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:50:52.417Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:50:52.417Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:50:52.418Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:50:52.418Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:50:52.420Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:50:52.425Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:50:52.501Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:50:52.504Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:50:52.508Z"}
+{"level":"notice","message":"pid: 20192","timestamp":"2016-05-16T10:50:52.527Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:50:52.528Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:50:52.529Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:50:52.530Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:50:52.530Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:50:52.530Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:50:52.530Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:50:52.531Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:50:52.534Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:50:52.536Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:50:53.887Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:50:53.890Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:50:53.891Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:50:58.262Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:50:58.336Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:50:58.342Z"}
+{"level":"notice","message":"pid: 1512","timestamp":"2016-05-16T10:50:58.646Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:50:58.647Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:50:58.648Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:50:58.649Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:50:58.649Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:50:58.650Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:50:58.650Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:50:58.650Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:50:58.658Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:50:58.676Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:51:00.626Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:51:00.634Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:51:00.647Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:51:16.614Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:51:16.615Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:51:16.616Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:51:16.617Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:51:16.620Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:51:16.627Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:51:16.722Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:51:16.724Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:51:16.730Z"}
+{"level":"notice","message":"pid: 1512","timestamp":"2016-05-16T10:51:16.754Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:51:16.755Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:51:16.758Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:51:16.758Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:51:16.758Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:51:16.759Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:51:16.759Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:51:16.760Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:51:16.768Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:51:19.817Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:51:19.898Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:51:19.904Z"}
+{"level":"notice","message":"pid: 19120","timestamp":"2016-05-16T10:51:20.176Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:51:20.177Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:51:20.177Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:51:20.178Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:51:20.178Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:51:20.178Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:51:20.179Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:51:20.179Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:51:20.184Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:51:20.197Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:51:21.928Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:51:21.937Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:51:21.951Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:51:32.917Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:51:32.917Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:51:32.918Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:51:32.918Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:51:32.921Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:51:32.924Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:51:33.006Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:51:33.009Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:51:33.015Z"}
+{"level":"notice","message":"pid: 19120","timestamp":"2016-05-16T10:51:33.028Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:51:33.029Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:51:33.030Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:51:33.031Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:51:33.033Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:51:33.033Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:51:33.034Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:51:33.034Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:51:33.041Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:51:33.046Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:51:34.268Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:51:34.274Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:51:34.275Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:51:37.481Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:51:37.583Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:51:37.594Z"}
+{"level":"notice","message":"pid: 22408","timestamp":"2016-05-16T10:51:37.899Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:51:37.899Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:51:37.900Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:51:37.900Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:51:37.901Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:51:37.901Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:51:37.901Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:51:37.902Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:51:37.909Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:51:37.923Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:51:39.688Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:51:39.691Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:51:39.698Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:52:01.682Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:52:01.682Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:52:01.684Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:52:01.684Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:52:01.688Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:52:01.768Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:52:01.782Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:52:01.785Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:52:01.788Z"}
+{"level":"notice","message":"pid: 22408","timestamp":"2016-05-16T10:52:01.810Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:52:01.811Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:52:01.813Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:52:01.814Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:52:01.814Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:52:01.815Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:52:01.815Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:52:01.816Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:52:01.825Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:52:05.728Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:52:05.817Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:52:05.828Z"}
+{"level":"notice","message":"pid: 17668","timestamp":"2016-05-16T10:52:06.083Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:52:06.084Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:52:06.085Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:52:06.086Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:52:06.086Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:52:06.087Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:52:06.087Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:52:06.087Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:52:06.095Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:52:06.108Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:52:07.740Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:52:07.753Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:52:08.175Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:52:27.738Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:52:27.739Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:52:27.740Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:52:27.741Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:52:27.744Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:52:27.751Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:52:30.274Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:52:30.341Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:52:30.347Z"}
+{"level":"notice","message":"pid: 21472","timestamp":"2016-05-16T10:52:30.653Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:52:30.654Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:52:30.655Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:52:30.656Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:52:30.656Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:52:30.656Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:52:30.656Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:52:30.657Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:52:30.665Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:52:30.677Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:52:32.726Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:52:32.731Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:52:32.745Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:52:59.691Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:53:28.195Z"}
+{"to":"127.0.0.1","params":"{}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:11.845Z"}
+{"to":"127.0.0.1","params":"{}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:22.562Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:55:27.842Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:55:27.914Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:55:27.926Z"}
+{"level":"notice","message":"pid: 20728","timestamp":"2016-05-16T10:55:28.207Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:55:28.208Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:55:28.208Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:55:28.209Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:55:28.209Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:55:28.209Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:55:28.209Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:55:28.209Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:55:28.218Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:55:28.231Z"}
+{"to":"127.0.0.1","params":"{}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:30.126Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:55:30.134Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:55:30.151Z"}
+{"to":"127.0.0.1","params":"{}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:32.355Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"action\":\"getWorld\",\"apiVersion\":1}","duration":5,"error":"Error: id is a required parameter for this action","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:34.554Z"}
+{"to":"127.0.0.1","params":"{}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:40.176Z"}
+{"to":"127.0.0.1","params":"{}","duration":0,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:55:41.980Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] new connection","timestamp":"2016-05-16T10:56:12.474Z"}
+{"to":"127.0.0.1","level":"info","message":"[server: websocket] connection closed","timestamp":"2016-05-16T10:56:22.282Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:56:46.149Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:56:46.149Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:56:46.150Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:56:46.150Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:56:46.155Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:56:46.164Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:56:46.275Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:56:46.282Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:56:46.288Z"}
+{"level":"notice","message":"pid: 20728","timestamp":"2016-05-16T10:56:46.304Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:56:46.305Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:56:46.306Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:56:46.306Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:56:46.307Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:56:46.307Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:56:46.307Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:56:46.307Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:56:46.313Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:56:46.315Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:56:47.878Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:56:47.885Z"}
+{"level":"info","message":"*** actionhero restarted ***","timestamp":"2016-05-16T10:56:47.885Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\initializers\\serverBroadcasters.js) ***","timestamp":"2016-05-16T10:58:12.879Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T10:58:12.880Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T10:58:12.880Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T10:58:12.882Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T10:58:12.885Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T10:58:12.887Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:58:12.965Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:58:12.967Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:58:12.971Z"}
+{"level":"notice","message":"pid: 20728","timestamp":"2016-05-16T10:58:12.986Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:58:12.987Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:58:12.988Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:58:12.989Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:58:12.989Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:58:12.989Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:58:12.990Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:58:12.990Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:58:12.995Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T10:58:18.036Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T10:58:18.109Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T10:58:18.123Z"}
+{"level":"notice","message":"pid: 11540","timestamp":"2016-05-16T10:58:18.411Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T10:58:18.412Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T10:58:18.413Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T10:58:18.414Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T10:58:18.415Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T10:58:18.415Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T10:58:18.416Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T10:58:18.416Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T10:58:18.428Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T10:58:18.447Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T10:58:20.437Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T10:58:20.442Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T10:58:38.876Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:04:24.446Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:04:24.544Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:04:24.557Z"}
+{"level":"notice","message":"pid: 20004","timestamp":"2016-05-16T11:04:24.860Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:04:24.861Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:04:24.862Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:04:24.863Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:04:24.863Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:04:24.863Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:04:24.864Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:04:24.864Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:04:24.870Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:04:24.884Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:04:26.892Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:04:26.898Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:04:48.547Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:04:48.628Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:04:48.640Z"}
+{"level":"notice","message":"pid: 8172","timestamp":"2016-05-16T11:04:49.020Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:04:49.021Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:04:49.022Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:04:49.023Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:04:49.023Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:04:49.023Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:04:49.023Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:04:49.023Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:04:49.030Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:04:49.044Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:04:50.764Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:04:50.771Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:04:52.369Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:05:20.997Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:05:21.068Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:05:21.074Z"}
+{"level":"notice","message":"pid: 2440","timestamp":"2016-05-16T11:05:21.450Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:05:21.451Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:05:21.452Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:05:21.452Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:05:21.452Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:05:21.452Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:05:21.453Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:05:21.453Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:05:21.462Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:05:21.477Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:05:23.224Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:05:23.229Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:05:23.234Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:05:54.703Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:05:54.781Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:05:54.789Z"}
+{"level":"notice","message":"pid: 10976","timestamp":"2016-05-16T11:05:55.164Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:05:55.165Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:05:55.166Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:05:55.167Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:05:55.168Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:05:55.168Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:05:55.168Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:05:55.169Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:05:55.176Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:05:55.192Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:05:57.109Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:05:57.117Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:06:03.074Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:06:27.291Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:06:27.386Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:06:27.395Z"}
+{"level":"notice","message":"pid: 20816","timestamp":"2016-05-16T11:06:27.898Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:06:27.899Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:06:27.901Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:06:27.902Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:06:27.903Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:06:27.903Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:06:27.904Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:06:27.904Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:06:27.914Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:06:27.934Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:06:30.505Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:06:30.514Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:06:30.520Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:07:12.154Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:07:12.226Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:07:12.233Z"}
+{"level":"notice","message":"pid: 21688","timestamp":"2016-05-16T11:07:12.671Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:07:12.672Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:07:12.673Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:07:12.673Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:07:12.674Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:07:12.674Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:07:12.674Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:07:12.675Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:07:12.683Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:07:12.698Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":2,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:14.420Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:07:14.426Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:07:14.430Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:16.257Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:17.089Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:19.276Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:38.723Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:07:43.271Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:07:43.349Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:07:43.360Z"}
+{"level":"notice","message":"pid: 3256","timestamp":"2016-05-16T11:07:43.693Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:07:43.694Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:07:43.695Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:07:43.695Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:07:43.695Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:07:43.695Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:07:43.696Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:07:43.696Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:07:43.702Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:07:43.716Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:07:45.233Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:07:45.243Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:45.280Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:47.428Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":2,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:56.396Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:07:58.676Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:08:04.450Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:09:03.876Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":0,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:09:18.861Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:10:45.171Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:10:45.259Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:10:45.267Z"}
+{"level":"notice","message":"pid: 8772","timestamp":"2016-05-16T11:10:45.686Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:10:45.687Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:10:45.689Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:10:45.690Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:10:45.690Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:10:45.690Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:10:45.691Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:10:45.691Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:10:45.697Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:10:45.719Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:10:47.670Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:10:47.676Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:10:47.681Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":226,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:11:18.500Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":306,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:12:07.189Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":377,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:12:15.400Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":233,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:12:28.034Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:13:37.973Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:13:38.068Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:13:38.146Z"}
+{"level":"notice","message":"pid: 1152","timestamp":"2016-05-16T11:13:38.543Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:13:38.544Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:13:38.545Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:13:38.546Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:13:38.546Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:13:38.547Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:13:38.547Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:13:38.547Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:13:38.560Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:13:38.584Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:13:40.556Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:13:40.559Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":325,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:14:26.164Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":229,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:15:53.491Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:16:30.563Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:16:30.630Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:16:30.636Z"}
+{"level":"notice","message":"pid: 20716","timestamp":"2016-05-16T11:16:30.951Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:16:30.951Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:16:30.952Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:16:30.953Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:16:30.953Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:16:30.953Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:16:30.953Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:16:30.954Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:16:30.960Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:16:30.973Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:16:33.185Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:16:33.194Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":241,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:16:33.545Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"0\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":222,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:16:35.352Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"1\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":338,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:16:38.199Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":228,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:16:39.662Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":247,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:16:51.189Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:17:37.074Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:17:37.165Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:17:37.172Z"}
+{"level":"notice","message":"pid: 21976","timestamp":"2016-05-16T11:17:37.518Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:17:37.518Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:17:37.519Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:17:37.519Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:17:37.520Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:17:37.520Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:17:37.520Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:17:37.521Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:17:37.529Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:17:37.543Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:17:39.225Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:17:39.231Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1675,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:17:41.520Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":1923,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:18:09.261Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":2028,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:18:29.904Z"}
+{"level":"info","message":"*** rebooting due to config change (c:\\Users\\inume\\Documents\\GitHub\\maplestory.io\\config\\api.js) ***","timestamp":"2016-05-16T11:19:07.225Z"}
+{"level":"alert","message":"Shutting down open servers and stopping task processing...","timestamp":"2016-05-16T11:19:07.225Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"2016-05-16T11:19:07.226Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"2016-05-16T11:19:07.227Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has left the cluster","timestamp":"2016-05-16T11:19:07.235Z"}
+{"level":"alert","message":"The actionhero has been stopped","timestamp":"2016-05-16T11:19:07.238Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:19:44.966Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:19:45.057Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:19:45.065Z"}
+{"level":"notice","message":"pid: 22412","timestamp":"2016-05-16T11:19:45.486Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:19:45.487Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:19:45.488Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:19:45.488Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:19:45.489Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:19:45.489Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:19:45.489Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:19:45.489Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:19:45.499Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:19:45.516Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:19:47.502Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:19:47.507Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":4222,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:19:51.714Z"}
+{"to":"127.0.0.1","action":"getWorld","params":"{\"id\":\"4\",\"action\":\"getWorld\",\"apiVersion\":1}","duration":4540,"level":"info","message":"[ action @ web ]","timestamp":"2016-05-16T11:19:52.036Z"}
+{"level":"notice","message":"*** starting actionhero ***","timestamp":"2016-05-16T11:20:20.806Z"}
+{"level":"warning","message":"running with fakeredis","timestamp":"2016-05-16T11:20:20.888Z"}
+{"level":"info","message":"actionhero member 192.168.1.7 has joined the cluster","timestamp":"2016-05-16T11:20:20.957Z"}
+{"level":"notice","message":"pid: 19564","timestamp":"2016-05-16T11:20:21.213Z"}
+{"level":"notice","message":"server ID: 192.168.1.7","timestamp":"2016-05-16T11:20:21.214Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Scania","timestamp":"2016-05-16T11:20:21.215Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Windia","timestamp":"2016-05-16T11:20:21.216Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Bera","timestamp":"2016-05-16T11:20:21.216Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: Khroa","timestamp":"2016-05-16T11:20:21.216Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: MYBCKN","timestamp":"2016-05-16T11:20:21.216Z"}
+{"level":"info","message":"ensuring the existence of the chatRoom: GRAZED","timestamp":"2016-05-16T11:20:21.217Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8082","timestamp":"2016-05-16T11:20:21.223Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"2016-05-16T11:20:21.239Z"}
+{"level":"notice","message":"environment: development","timestamp":"2016-05-16T11:20:23.016Z"}
+{"level":"notice","message":"*** Server Started ***","timestamp":"2016-05-16T11:20:23.024Z"}

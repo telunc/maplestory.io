@@ -44,5 +44,7 @@
 	"connection already in this room (%s)": "connection already in this room (%s)",
 	"unknown action or invalid apiVersion": "unknown action or invalid apiVersion",
 	"*** Rebooting due to initializer change (%s) ***": "*** Rebooting due to initializer change (%s) ***",
-	"Cannot write client-side JS for websocket server:": "Cannot write client-side JS for websocket server:"
+	"Cannot write client-side JS for websocket server:": "Cannot write client-side JS for websocket server:",
+	"%s is a required parameter for this action": "%s is a required parameter for this action",
+	"verb not found or not allowed (%s)": "verb not found or not allowed (%s)"
 }
