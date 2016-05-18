@@ -1,24 +1,70 @@
 {
-  "author": "YOU <YOU@example.com>",
-  "name": "my_actionhero_project",
-  "description": "my actionhero project",
+  "name": "maplestory.io",
   "version": "0.0.1",
+  "description": "An API end point for processing data from the MapleStory RPG.",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "DEBUG=node-dockercloud:* node lib/index.js",
+    "development": "./scripts/development",
+    "test": "DEBUG=node-dockercloud:test ENV=test mocha test/unit",
+    "test-local": "./scripts/test-local",
+    "integration": "mocha test/integration",
+    "e2e": "mocha -t 10000 test/e2e",
+    "lint": "eslint src",
+    "clean": "rimraf lib npm-shrinkwrap.json",
+    "compile": "npm run lint && npm run clean && babel src -d lib"
+  },
   "engines": {
-    "node": ">=0.10.0"
+    "node": "4.4.0",
+    "npm": "2.14.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://gitlab.inumedia.io/maplestory/maplestory.io.git"
+  },
+  "keywords": [
+    "Docker",
+    "NodeJS",
+    "Microservices",
+    "MapleStory",
+    "API",
+    "Game"
+  ],
+  "author": "Andy Turner <inumedia@inumedia.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "http://gitlab.inumedia.io/maplestory/maplestory.io/issues"
+  },
+  "homepage": "http://gitlab.inumedia.io/maplestory/maplestory.io",
+  "devDependencies": {
+    "babel-cli": "^6.7.7",
+    "babel-eslint": "^6.0.3",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-register": "^6.7.2",
+    "chai": "^3.5.0",
+    "eslint": "^2.8.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "rimraf": "^2.5.2",
+    "sinon": "^1.17.3",
+    "supertest": "^1.2.0"
   },
   "dependencies": {
-    "actionhero": "13.4.0",
+    "babel-polyfill": "^6.7.4",
+    "babel-runtime": "^6.6.1",
+    "core-js": "^2.2.2",
+    "bluebird": "^3.3.5",
+    "datadog-metrics": "^0.3.0",
+    "debug": "^2.2.0",
+    "progress": "^1.1.8",
+    "raven": "^0.10.0",
+    "source-map-support": "^0.4.0",
     "lodash": "^4.12.0",
     "rethinkdb": "^2.3.1",
-    "ws": "latest"
-  },
-  "devDependencies": {
-    "mocha": "latest",
-    "should": "latest"
-  },
-  "scripts": {
-    "start": "actionhero start",
-    "actionhero": "actionhero",
-    "test": "NODE_ENV=test mocha"
+    "socket.io": "1.4.6",
+    "express": "4.13.4"
   }
 }

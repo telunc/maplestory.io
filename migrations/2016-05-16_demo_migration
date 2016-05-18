@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+/*
+
+import migration from '../migration';
+import mongoose from 'mongoose';
+import Promise from 'bluebird';
+
+var LIMIT = 1000; // THIS IS THE LIMIT FOR THE NUMBER OF RECORDS WE WILL UPDATE PER BATCH
+
+var SELECTOR = { //THIS WILL SELECT THE RECORDS THAT WE WANT TO UPDATE
+	$or: [{
+		first_name: {
+			$eq: 'Hello'
+		}
+	}, {
+		last_name: {
+			$eq: 'World'
+		}
+	}]
+};
+
+const MODEL = 'User';
+
+main();
+
+async function main () {
+	try {
+		await migration(MODEL, SELECTOR, mutator, LIMIT);
+		process.exit(0);
+	} catch (e) {
+		process.exit(1);
+	}
+}
+
+function mutator (match) { //THIS WILL RUN FOR EVERY RECORD MATCHING THE SELECTOR
+	mutator.favorite_number = Math.floor(Math.random() * (100 - 1 + 1)) + 1
+}
+
+*/

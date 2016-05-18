@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+var axios = require('axios');
+var args = require('yargs').argv;
+
+function tryCheck (url, numContainers, max, count) {
+  count = count || 0;
+  var requests = [];
+  for (var i = 0; i < numContainers * 2; i++) requests.push(axios.get(url));
+  return axios.all(requests)
+  .catch((e) => {
+    if (count > max) return tryCheck(url, numContainers, ++count);
+    throw new Error(`Unable to connect to new deployment within ${max} attempts`);
+  })
+}
+
+function main () {
+  var url = args.url;
+  var numContainers = args.num_containers;
+  var max = args.retries || 3;
+  tryCheck(url, numContainers, max)
+  .then((res) => {
+    process.stdout.write('Healthy\n');
+    process.exit(0);
+  })
+  .catch((e) => {
+    process.stdout.write('Unhealthy\n');
+    process.exit(1);
+  })
+}
+
+main();

@@ -1,0 +1,71 @@
+lb:
+  image: 'dockercloud/haproxy:latest'
+  links:
+    - api-worker-blue
+  ports:
+    - '80:80'
+  restart: always
+  roles:
+    - global
+
+demo-worker-blue:
+  image: '<YOUR_DOCKERHUB_USERNAME>/demo:latest'
+  autodestroy: always
+  deployment_strategy: high_availability
+  environment:
+    - 'MONGO_URL=mongodb://db.demo:27017/test'
+    - ENV=production
+    - PORT=80
+  expose:
+    - '80'
+  mem_limit: 1024m
+  restart: on-failure
+  target_num_containers: 3
+
+api-worker-green:
+  image: '<YOUR_DOCKERHUB_USERNAME>/api:latest'
+  autodestroy: always
+  deployment_strategy: high_availability
+  environment:
+    - 'MONGO_URL=mongodb://db.demo:27017/test'
+    - ENV=production
+    - PORT=80
+  expose:
+    - '80'
+  mem_limit: 1024m
+  restart: on-failure
+
+db:
+  image: mongo
+  expose:
+    - '27017'
+
+
+api-worker-dev:
+  image: '<YOUR_DOCKERHUB_USERNAME>/api:latestdev'
+  autodestroy: always
+  deployment_strategy: high_availability
+  environment:
+  environment:
+    - 'MONGO_URL=mongodb://db-dev.demo:27017/test'
+    - ENV=production
+    - PORT=80
+  expose:
+    - '80'
+  mem_limit: 1024m
+  restart: on-failure
+
+lb-dev:
+  image: 'dockercloud/haproxy:latest'
+  links:
+    - api-worker-dev
+  ports:
+    - '80:80'
+  restart: always
+  roles:
+    - global
+
+db-dev:
+  image: mongo
+  expose:
+    - '27017'

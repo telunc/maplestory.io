@@ -1,0 +1,19 @@
+#!/bin/bash
+
+./node_modules/.bin/babel migrations -d .migrations
+
+for SCRIPT in ./.migrations/*
+do
+	if [ -f $SCRIPT -a -x $SCRIPT ]
+	then
+		echo "Running migration script $SCRIPT"
+		$SCRIPT --debug --verbose
+		ret_code=$?
+		if [ $ret_code != 0 ]; then
+			echo "Error running migration script $SCRIPT"
+			exit $ret_code
+		fi
+	fi
+done
+
+./node_modules/.bin/rimraf .migrations
