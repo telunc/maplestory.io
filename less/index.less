@@ -1,0 +1,72 @@
+.intro-card, .api-card{
+  .card-1;
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px auto;
+  font-size: 24px;
+  &:hover{
+    .card-1-hover
+  }
+  width: 80%;
+  min-width: 800px;
+}
+
+.api-card{
+  text-align: left;
+  font-weight: 300;
+  font-size: 16px;
+
+  .api-path{
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .api-desc{
+
+  }
+
+  .api-params{
+    margin: 15px 0;
+    &:before{
+      content: 'Parameters: ';
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+      .api-param{
+        list-style: none;
+        &:before{
+          content: '> '
+        }
+
+        .api-param-name{
+          padding: 0 0 0 5px;
+          &.api-param-number:after{
+            content: '(Number)';
+            font-weight: 300;
+            position: relative;
+            left: 5px;
+          }
+        }
+
+        .api-param-desc{
+          padding: 0 0 0 32px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .api-example{
+    &:before{
+      content: 'Example:';
+    }
+    pre{
+      background: #fbfaf8;
+      padding: .5rem;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 4px;
+      margin: 5px 0 0 0;
+    }
+  }
+}

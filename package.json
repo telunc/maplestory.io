@@ -55,16 +55,17 @@
   "dependencies": {
     "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.6.1",
-    "core-js": "^2.2.2",
     "bluebird": "^3.3.5",
+    "core-js": "^2.2.2",
     "datadog-metrics": "^0.3.0",
     "debug": "^2.2.0",
+    "express": "4.13.4",
+    "express-less": "0.0.8",
+    "lodash": "^4.12.0",
     "progress": "^1.1.8",
     "raven": "^0.10.0",
-    "source-map-support": "^0.4.0",
-    "lodash": "^4.12.0",
     "rethinkdb": "^2.3.1",
     "socket.io": "1.4.6",
-    "express": "4.13.4"
+    "source-map-support": "^0.4.0"
   }
 }
