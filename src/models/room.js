@@ -14,6 +14,15 @@ function GetRooms(){
   return r.db('maplefm').table('rooms').filter(r.row('room').ge(1))
 }
 
+function Connect() {
+  return r.connect({
+    host: process.env.RETHINKDB_HOST,
+    port: process.env.RETHINKDB_PORT,
+    AUTH: process.env.RETHINKDB_AUTH,
+    DB: process.env.RETHINKDB_DB
+  })
+}
+
 export default class Room {
   constructor(rethinkData){
     this._data = rethinkData;
