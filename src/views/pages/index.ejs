@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>MapleStory IO</title>
+    <meta name="description" content="A simple MapleStory API for various services.">
+    <meta name="author" content="Inumedia / crrio">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="title intro-card">MapleStory IO</div>
+        <div class="api-calls">
+        <% calls.map(function(call){ %>
+          <%- include('../partials/APICall', call) %>
+        <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

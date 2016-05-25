@@ -1,0 +1,14 @@
+<div class="api-card">
+  <div class="api-path"><%= url %></div>
+  <div class="api-desc"><%= desc %></div>
+  <div class="api-params">
+    <ul>
+        <% params.map(function(param){ %>
+          <li class="api-param"><b class="api-param-name api-param-<%- param.type %>"><%= param.name %></b><span class="api-param-desc"><%= param.desc %></span></li>
+        <% }) %>
+    </ul>
+  </div>
+  <div class="api-example">
+    <pre><%- JSON.stringify(example, null, '  ').trim('\r') %></pre>
+  </div>
+</div>
