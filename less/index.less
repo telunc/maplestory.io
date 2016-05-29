@@ -21,11 +21,10 @@
   left: 0;
   right: 0;
   height: 300px;
-  background: #2D9BB5;
   content: "";
   z-index: -1;
   top: 0;
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 300px 0px #1589E4 inset;
 }
 
 .api-calls{
@@ -33,6 +32,14 @@
     text-align: left;
     font-weight: 300;
     font-size: 16px;
+    position: relative;
+
+    .api-link{
+      color: #333;
+      position: absolute;
+      right: 15px;
+      text-decoration: none;
+    }
 
     .api-path{
       font-weight: 600;
@@ -82,9 +89,10 @@
       pre{
         background: #fbfaf8;
         padding: .5rem;
-        border: 1px solid rgba(0,0,0,.15);
+        border: 1px solid rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         margin: 5px 0 0 0;
+        overflow: hidden;
       }
     }
   }

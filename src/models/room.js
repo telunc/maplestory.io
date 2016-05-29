@@ -1,17 +1,7 @@
 import r from 'rethinkdb';
 import Promise from 'bluebird'
-
-/**
- * Internal look up table of server names.
- */
-var serverNames = [
-  'Scania',
-  'Windia',
-  'Bera',
-  'Khroa',
-  'MYBCKN',
-  'GRAZED'
-]
+import ServerNames from '../lib/ServerNames'
+import Shop from './shop'
 
 /**
  * Gets a new RethinkDB connection to run queries against.
@@ -28,8 +18,37 @@ function Connect() {
 /**
  * Gets a RethinkDB query filtered to the `rooms` table on the `maplefm` db.
  */
-function GetRooms(){
-  return r.db('maplefm').table('rooms').filter(r.row('room').ge(1))
+function GetRooms(filter){
+  return r.db("maplestory").table('rooms').filter(filter || {}).map(function(room){
+    return {
+      server: room('server'),
+      id: room('id'),
+      channel: room('channel'),
+      createdAt: room('createTime'),
+      room: room('room'),
+      shops: room('shops').values().map(function(shop){
+        return {
+          characterName: shop('characterName'),
+          shopName: shop('shopName'),
+          items: shop('items').eqJoin('id', r.db('maplestory').table('items')).map(function(item){
+            return item('left')
+              .merge(item('right')('Description'))
+              .merge(item('right')('MetaInfo').without("Icon"))
+              .merge(r.branch(item('right')('MetaInfo')('Equip'), r.expr({potentials: r.expr([
+                  {'PotentialId': item('left')('potential1').coerceTo('number'), target: 'potential1'},
+                  {'PotentialId': item('left')('potential2').coerceTo('number'), target: 'potential2'},
+                  {'PotentialId': item('left')('potential3').coerceTo('number'), target: 'potential3'},
+                  {'PotentialId': item('left')('bpotential1').coerceTo('number'), target: 'bpotential1'},
+                  {'PotentialId': item('left')('bpotential2').coerceTo('number'), target: 'bpotential2'},
+                  {'PotentialId': item('left')('bpotential3').coerceTo('number'), target: 'bpotential3'}
+              ]).eqJoin('PotentialId', r.db('maplestory').table('potentialLevels'), {index: 'PotentialId'}).zip()
+                .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
+                .eqJoin('PotentialId', r.db('maplestory').table('potentials')).zip().without('Level', 'PotentialId', 'RequiredLevel')}), {}))
+          }).without("unk1", "unk2", "unk3", "unk4", "unk5", "unk6", "unk7", "unk8", "WZFile", "WZFolder", "bpotential1Level", "bpotential2Level", "bpotential3Level", "potential1Level", "potential2Level", "potential3Level", 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
+        }
+      })
+    }
+  })
 }
 
 export default class Room {
@@ -38,7 +57,7 @@ export default class Room {
   }
 
   get shops(){
-    return this._data.shops
+    return this._data.shops.map(shop => new Shop(shop))
   }
   get server(){
     return this._data.server
@@ -50,7 +69,7 @@ export default class Room {
     return this._data.room
   }
   get serverName(){
-    return serverNames[this._data.server]
+    return ServerNames[this._data.server]
   }
   get id(){
     return this._data.id
@@ -76,7 +95,7 @@ export default class Room {
      */
     static async findAll(filter){
         const connection = await Connect()
-        const cursor = await GetRooms().filter(filter).run(connection)
+        const cursor = await GetRooms(filter).run(connection)
         const fullItems = await cursor.toArray()
         connection.close()
         console.log('Querying for: ', filter, 'returned:', fullItems.length)
@@ -88,7 +107,7 @@ export default class Room {
      */
     static async findFirst(filter){
         const connection = await Connect()
-        const cursor = await GetRooms().filter(filter).limit(1).run(connection)
+        const cursor = await GetRooms(filter).limit(1).run(connection)
         const fullItems = await cursor.toArray()
         connection.close()
         console.log('Querying for: ', filter, 'returned:', fullItems.length)

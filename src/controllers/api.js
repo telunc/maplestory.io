@@ -2,15 +2,8 @@ import express from 'express';
 import r from 'rethinkdb'
 import Promise from 'bluebird'
 import FMApi from './api/fm'
+import Maplestory from './api/maplestory'
 import compression from 'compression'
-import apicache from 'apicache'
-import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY } from '../environment'
-
-const caching = apicache.options({
-  debug: ENV.NODE_ENV == 'development',
-  defaultDuration: 60000,
-  enabled: true
-}).middleware
 
 const router = express.Router();
 
@@ -22,13 +15,18 @@ router.use('/', (req, res, next) => {
 
     res.status(200).send(model.toJSON ? model.toJSON() : model)
   }
-  next()
+
+  try{
+    next()
+  }catch(ex){
+    console.log(ex, ex.stack)
+    res.status(500).send(JSON.stringify(ex))
+  }
 })
 //Try to compress the objects, because 5Mb per request is costly
 router.use(compression())
-//Try to cache the results for at least 60 seconds as CPU is also costly
-router.use(caching())
 
 router.use('/fm', FMApi)
+router.use('/maplestory', Maplestory)
 
 export default router

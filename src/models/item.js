@@ -1,63 +1,351 @@
 import r from 'rethinkdb';
 import Promise from 'bluebird'
 
-var serverNames = [
-  'Scania',
-  'Windia',
-  'Bera',
-  'Khroa',
-  'MYBCKN',
-  'GRAZED'
-]
-
-function GetRooms(){
-  return r.db('maplefm').table('rooms').filter(r.row('room').ge(1))
+function GetItems(filter){
+  return r.db('maplestory').table('rooms').filter(filter || {}).concatMap(function(room){
+    return room('shops').values().concatMap(function(shop){
+      return shop('items')
+        .merge({
+          server: room('server'),
+          shopId: room('id').add('-').add(shop('id').coerceTo('string')),
+          channel: room('channel'),
+          createdAt: room('createTime'),
+          room: room('room'),
+          characterName: shop('characterName'),
+          shopName: shop('shopName'),
+        })
+    })
+  }).eqJoin('id', r.db('maplestory').table('items')).map(function(item){
+    return item('left')
+      .merge(item('right')('Description'))
+      .merge(item('right')('MetaInfo').without('Icon'))
+      .merge(r.branch(item('right')('MetaInfo')('Equip'), r.expr({potentials: r.expr([
+          {'PotentialId': item('left')('potential1').coerceTo('number'), target: 'potential1'},
+          {'PotentialId': item('left')('potential2').coerceTo('number'), target: 'potential2'},
+          {'PotentialId': item('left')('potential3').coerceTo('number'), target: 'potential3'},
+          {'PotentialId': item('left')('bpotential1').coerceTo('number'), target: 'bpotential1'},
+          {'PotentialId': item('left')('bpotential2').coerceTo('number'), target: 'bpotential2'},
+          {'PotentialId': item('left')('bpotential3').coerceTo('number'), target: 'bpotential3'}
+      ]).eqJoin('PotentialId', r.db('maplestory').table('potentialLevels'), {index: 'PotentialId'}).zip()
+      .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
+      .eqJoin('PotentialId', r.db('maplestory').table('potentials')).zip().without('Level', 'PotentialId', 'RequiredLevel')}), {}))
+  }).without('unk1', 'unk2', 'unk3', 'unk4', 'unk5', 'unk6', 'unk7', 'unk8', 'WZFile', 'WZFolder', 'bpotential1Level', 'bpotential2Level', 'bpotential3Level', 'potential1Level', 'potential2Level', 'potential3Level', 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
 }
 
-export default class Room {
+/**
+ * Gets a new RethinkDB connection to run queries against.
+ */
+function Connect() {
+  return r.connect({
+    host: process.env.RETHINKDB_HOST,
+    port: process.env.RETHINKDB_PORT,
+    AUTH: process.env.RETHINKDB_AUTH,
+    DB: process.env.RETHINKDB_DB
+  })
+}
+
+export default class Item {
   constructor(rethinkData){
     this._data = rethinkData;
   }
 
-  get shops(){
-    return this._data.shops
-  }
-  get server(){
-    return this._data.server
-  }
-  get channel(){
-    return this._data.channel
-  }
-  get room(){
-    return this._data.room
-  }
-  get serverName(){
-    return serverNames[this._data.server]
-  }
-  get id(){
-    return this._data.id
-  }
-  get createTime(){
-    return this._data.createTime
-  }
-
   toJSON(){
     return {
-      shops: this.shops,
-      server: this.server,
+      card: this.card,
+      cash: this.cash,
+      equip: this.equip,
+      icon: this.icon,
+      shop: this.shop,
+      chair: this.chair,
+      description: this.description,
+      ItemId: this.ItemId,
+      name: this.name,
+      slot: this.slot,
+      acc: this.acc,
+      avoid: this.avoid,
+      battleModeAtt: this.battleModeAtt,
+      bossDmg: this.bossDmg,
+      bundle: this.bundle,
+      category: this.category,
       channel: this.channel,
+      characterName: this.characterName,
+      createdAt: this.createdAt,
+      creator: this.creator,
+      dex: this.dex,
+      diligence: this.diligence,
+      durability: this.durability,
+      expireTime: this.expireTime,
+      growth: this.growth,
+      hammerApplied: this.hammerApplied,
+      ignoreDef: this.ignoreDef,
+      intelligence: this.intelligence,
+      isIdentified: this.isIdentified,
+      jump: this.jump,
+      luk: this.luk,
+      matk: this.matk,
+      mdef: this.mdef,
+      mhp: this.mhp,
+      mmp: this.mmp,
+      nebulite: this.nebulite,
+      numberOfEnhancements: this.numberOfEnhancements,
+      numberOfPlusses: this.numberOfPlusses,
+      only: this.only,
+      potentials: this.potentials,
+      price: this.price,
+      quantity: this.quantity,
+      rarity: this.rarity,
       room: this.room,
-      serverName: this.serverName,
-      id: this.id,
-      createTime: this.createTime
+      server: this.server,
+      shopID: this.shopID,
+      shopName: this.shopName,
+      speed: this.speed,
+      str: this.str,
+      untradeable: this.untradeable,
+      upgradesAvailable: this.upgradesAvailable,
+      watk: this.watk,
+      wdef: this.wdef,
     }
   }
 
-  static async find(serverId){
+  get card(){
+    return this._data.Card
+  }
+
+  get cash(){
+    return this._data.Cash
+  }
+
+  get equip(){
+    return this._data.Equip
+  }
+
+  get icon(){
+    return {
+      icon: '/api/maplestory/item/' + this.itemId + '/icon',
+      iconRaw: '/api/maplestory/item/' + this.itemId + '/iconRaw'
+    }
+  }
+
+  get shop(){
+    return this._data.Shop
+  }
+
+  get chair(){
+    return this._data.Chair
+  }
+
+  get description(){
+    return this._data.Description
+  }
+
+  get itemId(){
+    return this._data.Id
+  }
+
+  get name(){
+    return this._data.Name
+  }
+
+  get slot(){
+    return this._data.Slot
+  }
+
+  get acc(){
+    return this._data.acc
+  }
+
+  get avoid(){
+    return this._data.avoid
+  }
+
+  get battleModeAtt(){
+    return this._data.battleModeAtt
+  }
+
+  get bossDmg(){
+    return this._data.bossDmg
+  }
+
+  get bundle(){
+    return this._data.bundle
+  }
+
+  get category(){
+    return this._data.category
+  }
+
+  get channel(){
+    return this._data.channel
+  }
+
+  get characterName(){
+    return this._data.characterName
+  }
+
+  get createdAt(){
+    return this._data.createdAt
+  }
+
+  get creator(){
+    return this._data.creator
+  }
+
+  get dex(){
+    return this._data.dex
+  }
+
+  get diligence(){
+    return this._data.diligence
+  }
+
+  get durability(){
+    return this._data.durability
+  }
+
+  get expireTime(){
+    return this._data.expireTime
+  }
+
+  get growth(){
+    return this._data.growth
+  }
+
+  get hammerApplied(){
+    return this._data.hammerApplied
+  }
+
+  get ignoreDef(){
+    return this._data.ignoreDef
+  }
+
+  get intelligence(){
+    return this._data.intelligence
+  }
+
+  get isIdentified(){
+    return this._data.isIdentified
+  }
+
+  get jump(){
+    return this._data.jump
+  }
+
+  get luk(){
+    return this._data.luk
+  }
+
+  get matk(){
+    return this._data.matk
+  }
+
+  get mdef(){
+    return this._data.mdef
+  }
+
+  get mhp(){
+    return this._data.mhp
+  }
+
+  get mmp(){
+    return this._data.mmp
+  }
+
+  get nebulite(){
+    return this._data.nebulite
+  }
+
+  get numberOfEnhancements(){
+    return this._data.numberOfEnhancements
+  }
+
+  get numberOfPlusses(){
+    return this._data.numberOfPlusses
+  }
+
+  get only(){
+    return this._data.only
+  }
+
+  get potentials(){
+    return this._data.potentials
+  }
+
+  get price(){
+    return this._data.price
+  }
+
+  get quantity(){
+    return this._data.quantity
+  }
+
+  get rarity(){
+    return this._data.rarity
+  }
+
+  get room(){
+    return this._data.room
+  }
+
+  get server(){
+    return this._data.server
+  }
+
+  get shopID(){
+    return this._data.shopId
+  }
+
+  get shopName(){
+    return this._data.shopName
+  }
+
+  get speed(){
+    return this._data.speed
+  }
+
+  get str(){
+    return this._data.str
+  }
+
+  get untradeable(){
+    return this._data.untradeable
+  }
+
+  get upgradesAvailable(){
+    return this._data.upgradesAvailable
+  }
+
+  get watk(){
+    return this._data.watk
+  }
+
+  get wdef(){
+    return this._data.wdef
+  }
+
+  /**
+   * @param {object} filter The rethinkdb compatible filter object to use for the query.
+   */
+  static async findAll(filter){
     const connection = await Connect()
-    const cursor = await GetRooms().filter({server: Number(serverId)}).run(connection)
+    console.log('Querying for: ', filter)
+    const cursor = await GetItems(filter).run(connection)
+    const fullItems = await cursor.toArray()
+    console.log('Found items', fullItems.length)
+    connection.close()
+    console.log('Querying for: ', filter, 'returned:', fullItems.length)
+    return fullItems.map(entry => new Item(entry))
+  }
+
+  /**
+   * @param {object} filter The rethinkdb compatible filter object to use for the query.
+   */
+  static async findFirst(filter){
+    const connection = await Connect()
+    console.log('Querying for: ', filter)
+    const cursor = await GetItems(filter).limit(1).run(connection)
     const fullItems = await cursor.toArray()
     connection.close()
-    return fullItems.map(entry => new Room(entry))
+    console.log('Querying for: ', filter, 'returned:', fullItems.length)
+    return fullItems.map(entry => new Item(entry)).shift()
   }
 }
