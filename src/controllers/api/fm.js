@@ -15,19 +15,8 @@ const caching = apicache.options({
   enabled: true
 }).middleware
 
-router.use('/', (req, res, next) => {
-  res.success = (model) => {
-    if(model instanceof Array)
-      return res.status(200).send(model.map((entry) => entry.toJSON ? entry.toJSON() : entry ))
-
-    res.status(200).send(model.toJSON ? model.toJSON() : model)
-  }
-  next()
-})
-
 //Try to cache the results for at least 60 seconds as CPU is also costly
 router.use(caching())
-
 
 API.registerCall(
   '/api/fm/world/:worldId/rooms',
@@ -48,10 +37,14 @@ API.registerCall(
   ]
 )
 router.get('/world/:worldId/rooms', async (req, res, next) => {
-  var worldId = Number(req.params.worldId)
-  console.log(worldId);
-  const rooms = await Room.findRooms(worldId)
-  res.success(rooms)
+  try{
+    var worldId = Number(req.params.worldId)
+    const rooms = await Room.findRooms(worldId)
+    res.success(rooms)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
 })
 
 API.registerCall(
@@ -74,10 +67,15 @@ API.registerCall(
   }
 )
 router.get('/world/:worldId/room/:roomId', async (req, res, next) => {
-  var worldId = Number(req.params.worldId)
-  var roomId = Number(req.params.roomId)
-  const rooms = await Room.findRoom(worldId, 1, roomId)
-  res.success(rooms)
+  try{
+    var worldId = Number(req.params.worldId)
+    var roomId = Number(req.params.roomId)
+    const rooms = await Room.findRoom(worldId, 1, roomId)
+    res.success(rooms)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
 })
 
 API.registerCall(
@@ -148,10 +146,15 @@ API.registerCall(
   ]
 )
 router.get('/world/:worldId/room/:roomId/items', async (req, res, next) => {
-  var worldId = Number(req.params.worldId)
-  var roomId = Number(req.params.roomId)
-  const items = await Item.findAll({room: roomId, server: worldId})
-  res.success(items)
+  try{
+    var worldId = Number(req.params.worldId)
+    var roomId = Number(req.params.roomId)
+    const items = await Item.findAll({room: roomId, server: worldId})
+    res.success(items)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
 })
 
 export default router

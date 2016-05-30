@@ -98,7 +98,6 @@ export default class Room {
         const cursor = await GetRooms(filter).run(connection)
         const fullItems = await cursor.toArray()
         connection.close()
-        console.log('Querying for: ', filter, 'returned:', fullItems.length)
         return fullItems.map(entry => new Room(entry))
     }
 
@@ -110,7 +109,6 @@ export default class Room {
         const cursor = await GetRooms(filter).limit(1).run(connection)
         const fullItems = await cursor.toArray()
         connection.close()
-        console.log('Querying for: ', filter, 'returned:', fullItems.length)
         return fullItems.map(entry => new Room(entry)).shift()
     }
 
@@ -119,7 +117,7 @@ export default class Room {
      * @param {number} serverId The server id to find all of the current rooms for.
      */
     static async findRooms(serverId){
-        if(!serverId || serverId < 0 || serverId > 5) throw "Needs a valid Server Id (0-5)"
+        if((serverId != 0 && !serverId) || serverId < 0 || serverId > 5) throw "Needs a valid Server Id (0-5)"
         return Room.findAll({server: Number(serverId)})
     }
 
@@ -130,9 +128,10 @@ export default class Room {
      * @param {number} roomId The room number to search for. (0-21)
      */
     static async findRoom(serverId, channelId, roomId){
-        if(!serverId || serverId < 0 || serverId > 5) throw "Needs a valid Server Id (0-5)"
-        if(!channelId || channelId < 1 || channelId > 20) throw "Needs a valid Channel Id (1-20)"
-        if(!roomId || roomId < 0 || roomId > 21) throw "Needs a valid Room Id (0-21)"
+      console.log('Server Id', serverId)
+        if((serverId != 0 && !serverId) || serverId < 0 || serverId > 5) throw "Needs a valid Server Id (0-5)"
+        if((channelId != 0 && !channelId) || channelId < 1 || channelId > 20) throw "Needs a valid Channel Id (1-20)"
+        if((roomId != 0 && !roomId) || roomId < 0 || roomId > 21) throw "Needs a valid Room Id (0-21)"
         return Room.findFirst({server: Number(serverId), channel: Number(channelId), room: Number(roomId)})
     }
 }

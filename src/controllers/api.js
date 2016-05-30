@@ -8,7 +8,7 @@ import compression from 'compression'
 const router = express.Router();
 
 //Convert objects appropriately
-router.use('/', (req, res, next) => {
+router.use('/', async (req, res, next) => {
   res.success = (model) => {
     if(model instanceof Array)
       return res.status(200).send(model.map((entry) => entry.toJSON ? entry.toJSON() : entry ))
@@ -16,13 +16,9 @@ router.use('/', (req, res, next) => {
     res.status(200).send(model.toJSON ? model.toJSON() : model)
   }
 
-  try{
-    next()
-  }catch(ex){
-    console.log(ex, ex.stack)
-    res.status(500).send(JSON.stringify(ex))
-  }
+  return next()
 })
+
 //Try to compress the objects, because 5Mb per request is costly
 router.use(compression())
 

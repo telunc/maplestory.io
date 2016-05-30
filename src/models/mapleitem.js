@@ -13,6 +13,18 @@ function GetItems(filter){
   }).without('HighItemId', 'LowItemId')
 }
 
+function GetItem(id){
+  return r.db('maplestory').table('items').getAll(id).map((item) => {
+    return item('MetaInfo')
+      .merge(r.expr({
+        id: item('id'),
+        description: item('Description')('Description'),
+        name: item('Description')('Name')
+      }))
+      .merge(item('TypeInfo'))
+  }).without('HighItemId', 'LowItemId')
+}
+
 /**
  * Gets a new RethinkDB connection to run queries against.
  */
@@ -43,12 +55,9 @@ export default class MapleItem {
    */
   static async findAll(filter){
     const connection = await Connect()
-    console.log('Querying for: ', filter)
     const cursor = await GetItems(filter).run(connection)
     const fullItems = await cursor.toArray()
-    console.log('Found items', fullItems.length)
     connection.close()
-    console.log('Querying for: ', filter, 'returned:', fullItems.length)
     return fullItems.map(entry => new MapleItem(entry))
   }
 
@@ -57,11 +66,20 @@ export default class MapleItem {
    */
   static async findFirst(filter){
     const connection = await Connect()
-    console.log('Querying for: ', filter)
     const cursor = await GetItems(filter).limit(1).run(connection)
     const fullItems = await cursor.toArray()
     connection.close()
-    console.log('Querying for: ', filter, 'returned:', fullItems.length)
+    return fullItems.map(entry => new MapleItem(entry)).shift()
+  }
+
+  /**
+   * @param {Number} itemId The ID to look the item up with.
+   */
+  static async getFirst(itemId){
+    const connection = await Connect()
+    const cursor = await GetItem(itemId).limit(1).run(connection)
+    const fullItems = await cursor.toArray()
+    connection.close()
     return fullItems.map(entry => new MapleItem(entry)).shift()
   }
 }

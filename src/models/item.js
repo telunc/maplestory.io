@@ -327,12 +327,9 @@ export default class Item {
    */
   static async findAll(filter){
     const connection = await Connect()
-    console.log('Querying for: ', filter)
     const cursor = await GetItems(filter).run(connection)
     const fullItems = await cursor.toArray()
-    console.log('Found items', fullItems.length)
     connection.close()
-    console.log('Querying for: ', filter, 'returned:', fullItems.length)
     return fullItems.map(entry => new Item(entry))
   }
 
@@ -341,11 +338,9 @@ export default class Item {
    */
   static async findFirst(filter){
     const connection = await Connect()
-    console.log('Querying for: ', filter)
     const cursor = await GetItems(filter).limit(1).run(connection)
     const fullItems = await cursor.toArray()
     connection.close()
-    console.log('Querying for: ', filter, 'returned:', fullItems.length)
     return fullItems.map(entry => new Item(entry)).shift()
   }
 }
