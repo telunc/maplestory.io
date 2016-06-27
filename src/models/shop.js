@@ -3,7 +3,7 @@ import Promise from 'bluebird'
 import Item from './item'
 
 function GetShops(filter){
-  return r.db("maplestory").table('rooms').filter(filter || {}).map(function(room){
+  return r.db('maplestory').table('rooms').filter(filter || {}).map(function(room){
     return room('shops').values().limit(1).map(function(shop){
       return {
         server: room('server'),
@@ -27,7 +27,7 @@ function GetShops(filter){
           ]).eqJoin('PotentialId', r.db('maplestory').table('potentialLevels'), {index: 'PotentialId'}).zip()
             .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
             .eqJoin('PotentialId', r.db('maplestory').table('potentials')).zip().without('Level', 'PotentialId', 'RequiredLevel')}), {}))
-        }).without("unk1", "unk2", "unk3", "unk4", "unk5", "unk6", "unk7", "unk8", "WZFile", "WZFolder", "bpotential1Level", "bpotential2Level", "bpotential3Level", "potential1Level", "potential2Level", "potential3Level", 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
+        }).without('unk1', 'unk2', 'unk3', 'unk4', 'unk5', 'unk6', 'unk7', 'unk8', 'WZFile', 'WZFolder', 'bpotential1Level', 'bpotential2Level', 'bpotential3Level', 'potential1Level', 'potential2Level', 'potential3Level', 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
       }
     })
   })

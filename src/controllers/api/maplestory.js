@@ -18,7 +18,7 @@ router.get('/item/:itemId/icon', async (req, res, next) => {
     var itemId = Number(req.params.itemId)
     const item = await MapleItem.getFirst(itemId)
 
-    if(!item || !item.Icon || !item.Icon.Icon) return res.status(404).send("Couldn't find an icon for that item.")
+    if(!item || !item.Icon || !item.Icon.Icon) return res.status(404).send('Couldn\'t find an icon for that item.')
 
     var iconData = new Buffer(item.Icon.Icon, 'base64')
     res.set('Content-Type', 'image/png')
@@ -41,7 +41,7 @@ router.get('/item/:itemId/iconRaw', async (req, res, next) => {
     var itemId = Number(req.params.itemId)
     const item = await MapleItem.getFirst(itemId)
 
-    if(!item || !item.Icon || !item.Icon.IconRaw) return res.status(404).send("Couldn't find an icon for that item.")
+    if(!item || !item.Icon || !item.Icon.IconRaw) return res.status(404).send('Couldn\'t find an icon for that item.')
 
     var iconData = new Buffer(item.Icon.IconRaw, 'base64')
     res.set('Content-Type', 'image/png')

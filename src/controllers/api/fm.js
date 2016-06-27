@@ -24,12 +24,12 @@ API.registerCall(
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   [
     {
-        "shops": {
-            "shopId": {
-                "characterName": "CharacterName",
-                "id": "shopId",
-                "items": [
-                    "itemObject"
+        'shops': {
+            'shopId': {
+                'characterName': 'CharacterName',
+                'id': 'shopId',
+                'items': [
+                    'itemObject'
                 ]
             }
         }
@@ -55,12 +55,12 @@ API.registerCall(
     API.createParameter(':roomId', 'number', 'The ID of the room. (1-22)')
   ],
   {
-      "shops": {
-          "shopId": {
-              "characterName": "CharacterName",
-              "id": "shopId",
-              "items": [
-                  "itemObject"
+      'shops': {
+          'shopId': {
+              'characterName': 'CharacterName',
+              'id': 'shopId',
+              'items': [
+                  'itemObject'
               ]
           }
       }
@@ -88,16 +88,16 @@ API.registerCall(
   [
     {
       cash: {cash:true},
-      equip: {"accountSharable":null,"attack":null,"attackSpeed":null,"bdR":null,"bossReward":null,"charismaEXP":null,"charmEXP":null,"craftEXP":null,"durability":null,"equipTradeBlock":null,"exItem":null,"imdR":null,"incACC":null,"incCraft":null,"incDEX":null,"incEVA":null,"incINT":null,"incJump":null,"incLUK":null,"incMAD":null,"incMDD":null,"incMHP":null,"incMMP":null,"incPAD":null,"incPDD":null,"incSTR":null,"incSpeed":null,"islot":"MaPn","noPotential":null,"reqDEX":0,"reqINT":0,"reqJob":0,"reqJob2":null,"reqLUK":0,"reqLevel":0,"reqPOP":null,"reqSTR":0,"reqSpecJob":null,"senseEXP":null,"superiorEqp":null,"tradeAvailable":null,"tradeBlock":null,"tuc":null,"unchangeable":null,"vslot":"MaPn","willEXP":null},
+      equip: {'accountSharable':null,'attack':null,'attackSpeed':null,'bdR':null,'bossReward':null,'charismaEXP':null,'charmEXP':null,'craftEXP':null,'durability':null,'equipTradeBlock':null,'exItem':null,'imdR':null,'incACC':null,'incCraft':null,'incDEX':null,'incEVA':null,'incINT':null,'incJump':null,'incLUK':null,'incMAD':null,'incMDD':null,'incMHP':null,'incMMP':null,'incPAD':null,'incPDD':null,'incSTR':null,'incSpeed':null,'islot':'MaPn','noPotential':null,'reqDEX':0,'reqINT':0,'reqJob':0,'reqJob2':null,'reqLUK':0,'reqLevel':0,'reqPOP':null,'reqSTR':0,'reqSpecJob':null,'senseEXP':null,'superiorEqp':null,'tradeAvailable':null,'tradeBlock':null,'tuc':null,'unchangeable':null,'vslot':'MaPn','willEXP':null},
       icon: {
         icon: 'base64/png',
         iconRaw: 'base64/png'
       },
-      shop: {"monsterBook":false,"notSale":false,"price":100},
-      chair: {"recoveryHP":100,"recoveryMP":50,"reqLevel":0},
-      description: "Some really awesome item",
+      shop: {'monsterBook':false,'notSale':false,'price':100},
+      chair: {'recoveryHP':100,'recoveryMP':50,'reqLevel':0},
+      description: 'Some really awesome item',
       ItemId: 0,
-      name: "Pro Item",
+      name: 'Pro Item',
       slot: 0,
       acc: 0,
       avoid: 0,
@@ -108,7 +108,7 @@ API.registerCall(
       channel: 0,
       characterName: 0,
       createdAt: 0,
-      creator: "SomeCoolGuy123456789",
+      creator: 'SomeCoolGuy123456789',
       dex: 0,
       diligence: 0,
       durability: 0,

@@ -19,7 +19,7 @@ function Connect() {
  * Gets a RethinkDB query filtered to the `rooms` table on the `maplefm` db.
  */
 function GetRooms(filter){
-  return r.db("maplestory").table('rooms').filter(filter || {}).map(function(room){
+  return r.db('maplestory').table('rooms').filter(filter || {}).map(function(room){
     return {
       server: room('server'),
       id: room('id'),
@@ -33,7 +33,7 @@ function GetRooms(filter){
           items: shop('items').eqJoin('id', r.db('maplestory').table('items')).map(function(item){
             return item('left')
               .merge(item('right')('Description'))
-              .merge(item('right')('MetaInfo').without("Icon"))
+              .merge(item('right')('MetaInfo').without('Icon'))
               .merge(r.branch(item('right')('MetaInfo')('Equip'), r.expr({potentials: r.expr([
                   {'PotentialId': item('left')('potential1').coerceTo('number'), target: 'potential1'},
                   {'PotentialId': item('left')('potential2').coerceTo('number'), target: 'potential2'},
@@ -44,7 +44,7 @@ function GetRooms(filter){
               ]).eqJoin('PotentialId', r.db('maplestory').table('potentialLevels'), {index: 'PotentialId'}).zip()
                 .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
                 .eqJoin('PotentialId', r.db('maplestory').table('potentials')).zip().without('Level', 'PotentialId', 'RequiredLevel')}), {}))
-          }).without("unk1", "unk2", "unk3", "unk4", "unk5", "unk6", "unk7", "unk8", "WZFile", "WZFolder", "bpotential1Level", "bpotential2Level", "bpotential3Level", "potential1Level", "potential2Level", "potential3Level", 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
+          }).without('unk1', 'unk2', 'unk3', 'unk4', 'unk5', 'unk6', 'unk7', 'unk8', 'WZFile', 'WZFolder', 'bpotential1Level', 'bpotential2Level', 'bpotential3Level', 'potential1Level', 'potential2Level', 'potential3Level', 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
         }
       })
     }
@@ -117,7 +117,7 @@ export default class Room {
      * @param {number} serverId The server id to find all of the current rooms for.
      */
     static async findRooms(serverId){
-        if((serverId != 0 && !serverId) || serverId < 0 || serverId > 5) throw "Needs a valid Server Id (0-5)"
+        if((serverId != 0 && !serverId) || serverId < 0 || serverId > 5) throw 'Needs a valid Server Id (0-5)'
         return Room.findAll({server: Number(serverId)})
     }
 
@@ -129,9 +129,9 @@ export default class Room {
      */
     static async findRoom(serverId, channelId, roomId){
       console.log('Server Id', serverId)
-        if((serverId != 0 && !serverId) || serverId < 0 || serverId > 5) throw "Needs a valid Server Id (0-5)"
-        if((channelId != 0 && !channelId) || channelId < 1 || channelId > 20) throw "Needs a valid Channel Id (1-20)"
-        if((roomId != 0 && !roomId) || roomId < 0 || roomId > 21) throw "Needs a valid Room Id (0-21)"
+        if((serverId != 0 && !serverId) || serverId < 0 || serverId > 5) throw 'Needs a valid Server Id (0-5)'
+        if((channelId != 0 && !channelId) || channelId < 1 || channelId > 20) throw 'Needs a valid Channel Id (1-20)'
+        if((roomId != 0 && !roomId) || roomId < 0 || roomId > 21) throw 'Needs a valid Room Id (0-21)'
         return Room.findFirst({server: Number(serverId), channel: Number(channelId), room: Number(roomId)})
     }
 }
