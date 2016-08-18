@@ -6,6 +6,7 @@ machine:
 dependencies:
   override:
     - npm install
+    - npm run compile
     - docker info
     - docker build -t inumedia/maplestory.io .
 deployment:
