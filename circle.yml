@@ -6,15 +6,9 @@ machine:
 dependencies:
   override:
     - npm install
-test:
-  override:
-    - ./scripts/build
 deployment:
   hub:
     branch: master
     commands:
-      - ./scripts/deploy
-  staging:
-    branch: dev
-    commands:
-      - ./scripts/deploy-dev
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push circleci/elasticsearch
