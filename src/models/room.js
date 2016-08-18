@@ -56,6 +56,9 @@ export default class Room {
     this._data = rethinkData;
   }
 
+  get createdAt() {
+    return this._data.createdAt.getTime()
+  }
   get shops(){
     return this._data.shops.map(shop => new Shop(shop))
   }

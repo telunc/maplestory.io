@@ -48,6 +48,91 @@ router.get('/world/:worldId/rooms', async (req, res, next) => {
 })
 
 API.registerCall(
+  '/api/fm/world/:worldId/rooms/legacy',
+  'Gets all of the items in the world.',
+  API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
+  [
+    {
+        'shops': {
+            'shopId': {
+                'characterName': 'CharacterName',
+                'id': 'shopId',
+                'items': [
+                    'itemObject'
+                ]
+            }
+        }
+    }
+  ]
+)
+router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
+  try{
+    var worldId = Number(req.params.worldId)
+    const rooms = await Room.findRooms(worldId)
+    var mostRecentTimestamp = 0
+    const items = rooms.reduce(function (allItems, room) {
+      mostRecentTimestamp = Math.max(mostRecentTimestamp, room.createdAt)
+      if (!room.shops.length) return allItems
+      return allItems.concat.apply(allItems, room.shops.reduce(function (roomItems, shop) {
+        if (!shop.items.length) return roomItems
+        return roomItems.concat.apply(roomItems, shop.items.map(function (item) {
+          var obscureItem = {
+            t: item.acc,
+            u: item.avoid,
+            B: item.battleModeAtt,
+            C: item.bossDmg,
+            b: item.bundle,
+            Q: item.category,
+            E: item.creator,
+            P: item.description,
+            k: item.dex,
+            v: item.diligence,
+            y: item.growth,
+            A: item.hammerApplied,
+            T: item.icon.icon,
+            D: item.ignoreDef,
+            l: item.intelligence,
+            F: item.isIdentified,
+            x: item.jump,
+            m: item.luk,
+            q: item.matk,
+            s: item.mdef,
+            n: item.mhp,
+            o: item.mmp,
+            O: item.name,
+            V: item.nebulite,
+            H: item.numberOfEnhancements,
+            i: item.numberOfPlusses,
+            c: item.price,
+            a: item.quantity,
+            G: item.rarity,
+            w: item.speed,
+            j: item.str,
+            h: item.upgradesAvailable,
+            p: item.watk,
+            r: item.wdef,
+            U: item.itemId,
+            d: room.channel,
+            e: room.room,
+            f: shop.shopName,
+            g: shop.characterName
+          }
+          return obscureItem
+        }, []))
+      }, []))
+    }, [])
+    const legacyResponse = [
+      { fm_items: items },
+      { seconds_ago: mostRecentTimestamp }
+    ]
+    res.success(legacyResponse)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
   '/api/fm/world/:worldId/room/:roomId',
   'Gets a list of shops and items in a specific room on a specific world.',
   [

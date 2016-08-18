@@ -104,6 +104,7 @@ export default class Item {
       upgradesAvailable: this.upgradesAvailable,
       watk: this.watk,
       wdef: this.wdef,
+      id: this.Id
     }
   }
 
