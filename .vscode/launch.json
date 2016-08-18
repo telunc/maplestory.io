@@ -18,8 +18,9 @@
                 "NODE_ENV": "development",
                 "RETHINKDB_HOST": "127.0.0.1",
                 "RETHINKDB_PORT": "28015",
-                "RETHINKDB_AUTH": "",
-                "RETHINKDB_DB": "maplefm"
+                "RETHINKDB_USER": "",
+                "RETHINKDB_PASS": "",
+                "RETHINKDB_DB": "maplestory"
             },
             "externalConsole": false,
             "sourceMaps": false,
