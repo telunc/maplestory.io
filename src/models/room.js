@@ -10,7 +10,8 @@ function Connect() {
   return r.connect({
     host: process.env.RETHINKDB_HOST,
     port: process.env.RETHINKDB_PORT,
-    AUTH: process.env.RETHINKDB_AUTH,
+    user: process.env.RETHINKDB_USER,
+    pass: process.env.RETHINKDB_PASS,
     DB: process.env.RETHINKDB_DB
   })
 }
