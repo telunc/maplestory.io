@@ -89,7 +89,7 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
             v: item.diligence,
             y: item.growth,
             A: item.hammerApplied,
-            T: item.icon.icon,
+            T: item.itemId,
             D: item.ignoreDef,
             l: item.intelligence,
             F: item.isIdentified,
