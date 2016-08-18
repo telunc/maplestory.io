@@ -15,5 +15,5 @@ deployment:
     commands:
       - npm run compile
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker tag inumedia/maplestory.io:latest inumedia/maplestory.io master
+      - docker tag inumedia/maplestory.io:latest inumedia/maplestory.io:master
       - docker push inumedia/maplestory.io
