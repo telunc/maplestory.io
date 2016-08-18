@@ -12,6 +12,5 @@ RUN npm install --production
 
 # Bundle app source
 COPY lib /usr/src/app/lib/
-COPY cert /usr/src/app/cert/
 
 CMD [ "npm", "start" ]
