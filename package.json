@@ -10,7 +10,7 @@
     "e2e": "mocha -t 10000 test/e2e",
     "lint": "eslint src",
     "clean": "rimraf lib npm-shrinkwrap.json",
-    "compile": "npm run lint && npm run clean && babel src -d lib"
+    "compile": "npm run lint && npm run clean && babel src -d lib && cp -R src/views lib/views"
   },
   "engines": {
     "node": "4.4.0",
