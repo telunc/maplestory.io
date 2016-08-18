@@ -17,4 +17,10 @@ app.use('/css', expressLess(__dirname + '/../less', {debug: ENV.NODE_ENV == 'dev
 app.use(express.static('public'))
 
 app.listen(PORT)
+
+console.log('host:', process.env.RETHINKDB_HOST)
+console.log('port:', process.env.RETHINKDB_PORT)
+console.log('user:', process.env.RETHINKDB_USER)
+console.log('pass:', process.env.RETHINKDB_PASS)
+console.log('DB:', process.env.RETHINKDB_DB)
 console.log('Listening on', PORT)
