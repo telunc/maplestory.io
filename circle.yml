@@ -5,7 +5,7 @@ machine:
     - docker
 dependencies:
   override:
-    - ./scripts/deps
+    - npm install
 test:
   override:
     - ./scripts/build
