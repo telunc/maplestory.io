@@ -6,8 +6,6 @@
   "scripts": {
     "start": "DEBUG=node-dockercloud:* node lib/index.js",
     "development": "./scripts/development",
-    "test": "DEBUG=node-dockercloud:test ENV=test mocha test/unit",
-    "test-local": "./scripts/test-local",
     "integration": "mocha test/integration",
     "e2e": "mocha -t 10000 test/e2e",
     "lint": "eslint src",
