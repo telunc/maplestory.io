@@ -37,3 +37,5 @@ node_modules
 
 # Shrinkwrap
 npm-shrinkwrap.json
+
+./.vscode/launch.json
