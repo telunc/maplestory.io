@@ -13,7 +13,7 @@ COPY package.json /usr/src/app/
 RUN npm install --production
 
 # Bundle app source
-COPY less /usr/src/less/
+COPY less /usr/src/app/less
 COPY lib /usr/src/app/lib/
 COPY public /usr/src/app/public
 
