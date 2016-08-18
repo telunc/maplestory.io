@@ -40,3 +40,4 @@ lib/
 npm-shrinkwrap.json
 
 ./.vscode/launch.json
+.vscode/launch.json

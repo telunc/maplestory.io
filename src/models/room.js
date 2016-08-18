@@ -11,7 +11,7 @@ function Connect() {
     host: process.env.RETHINKDB_HOST,
     port: process.env.RETHINKDB_PORT,
     user: process.env.RETHINKDB_USER,
-    pass: process.env.RETHINKDB_PASS,
+    password: process.env.RETHINKDB_PASS,
     DB: process.env.RETHINKDB_DB
   })
 }
