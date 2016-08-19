@@ -125,7 +125,7 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
     }, [])
     const legacyResponse = [
       { fm_items: items },
-      { seconds_ago: (Date.now() - mostRecentTimestamp) }
+      { seconds_ago: (Date.now() - mostRecentTimestamp) / 1000 }
     ]
     res.success(legacyResponse)
   }catch(ex){
