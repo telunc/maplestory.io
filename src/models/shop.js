@@ -16,6 +16,7 @@ function GetShops(filter){
         items: shop('items').eqJoin('id', r.db('maplestory').table('items')).map(function(item){
           return item('left')
           .merge(item('right')('Description'))
+          .merge(r.branch(item('right')('TypeInfo'), item('right')('TypeInfo'), {'Category': 'Unknown', 'OverallCategory': 'Unknown', 'SubCategory': 'Unknown'}))
           .merge(item('right')('MetaInfo'))
           .merge(r.branch(item('right')('MetaInfo')('Equip'), r.expr({potentials: r.expr([
               {'PotentialId': item('left')('potential1').coerceTo('number'), target: 'potential1'},
