@@ -16,6 +16,9 @@ router.use('/', async (req, res, next) => {
     res.status(200).send(model.toJSON ? model.toJSON() : model)
   }
 
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
   return next()
 })
 
