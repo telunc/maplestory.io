@@ -3,6 +3,7 @@ import r from 'rethinkdb'
 import Promise from 'bluebird'
 import FMApi from './api/fm'
 import Maplestory from './api/maplestory'
+import Character from './api/character'
 import compression from 'compression'
 
 const router = express.Router();
@@ -27,5 +28,6 @@ router.use(compression())
 
 router.use('/fm', FMApi)
 router.use('/maplestory', Maplestory)
+router.use('/character', Character)
 
 export default router

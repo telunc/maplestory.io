@@ -55,6 +55,7 @@
     "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.6.1",
     "bluebird": "^3.3.5",
+    "cheerio": "^0.20.0",
     "compression": "^1.6.2",
     "core-js": "^2.2.2",
     "datadog-metrics": "^0.3.0",
@@ -65,6 +66,8 @@
     "lodash": "^4.12.0",
     "progress": "^1.1.8",
     "raven": "^0.10.0",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
     "rethinkdb": "^2.3.1",
     "socket.io": "1.4.6",
     "source-map-support": "^0.4.0"
