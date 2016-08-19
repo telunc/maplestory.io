@@ -4,8 +4,9 @@ import Promise from 'bluebird'
 import API from '../../lib/API'
 import rp from 'request-promise'
 import cheerio from 'cheerio'
+import Character from '../../models/character'
 
-const router = express.Router();
+const router = express.Router()
 
 API.registerCall(
   '/api/character/:characterName',
@@ -58,7 +59,8 @@ router.get('/:characterName', async (req, res, next) => {
       rankMovement = Number(rankMovement)
 
       return {
-        id: characterName,
+        id: `${characterName}-${ranking}`,
+        name: characterName,
         job: characterJob,
         ranking: rankLevel,
         world: world,
