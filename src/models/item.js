@@ -174,7 +174,15 @@ export default class Item {
   }
 
   get category(){
-    return this._data.category
+    return this._data.Category
+  }
+
+  get overallCategory(){
+    return this._data.OverallCategory
+  }
+
+  get subCategory(){
+    return this._data.SubCategory
   }
 
   get channel(){
