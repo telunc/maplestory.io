@@ -51,21 +51,6 @@ API.registerCall(
   '/api/fm/world/:worldId/rooms/legacy',
   'Gets all of the items in the world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
-<<<<<<< Updated upstream
-  [
-    {
-        'shops': {
-            'shopId': {
-                'characterName': 'CharacterName',
-                'id': 'shopId',
-                'items': [
-                    'itemObject'
-                ]
-            }
-        }
-    }
-  ]
-=======
   [{
     t: 'item.acc',
     u: 'item.avoid',
@@ -109,7 +94,6 @@ API.registerCall(
     f: 'shop.shopName',
     g: 'shop.characterName'
   }]
->>>>>>> Stashed changes
 )
 router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
   try{
