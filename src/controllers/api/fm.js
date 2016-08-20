@@ -51,6 +51,7 @@ API.registerCall(
   '/api/fm/world/:worldId/rooms/legacy',
   'Gets all of the items in the world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
+<<<<<<< Updated upstream
   [
     {
         'shops': {
@@ -64,6 +65,51 @@ API.registerCall(
         }
     }
   ]
+=======
+  [{
+    t: 'item.acc',
+    u: 'item.avoid',
+    B: 'item.battleModeAtt',
+    C: 'item.bossDmg',
+    b: 'item.bundle',
+    Q: 'item.overallCategory',
+    R: 'item.category',
+    S: 'item.subCategory',
+    E: 'item.creator',
+    P: 'item.description',
+    k: 'item.dex',
+    v: 'item.diligence',
+    y: 'item.growth',
+    A: 'item.hammerApplied',
+    T: 'item.itemId',
+    D: 'item.ignoreDef',
+    l: 'item.intelligence',
+    F: 'item.isIdentified',
+    x: 'item.jump',
+    m: 'item.luk',
+    q: 'item.matk',
+    s: 'item.mdef',
+    n: 'item.mhp',
+    o: 'item.mmp',
+    O: 'item.name',
+    V: 'item.nebulite',
+    H: 'item.numberOfEnhancements',
+    i: 'item.numberOfPlusses',
+    c: 'item.price',
+    a: 'item.quantity',
+    G: 'item.rarity',
+    w: 'item.speed',
+    j: 'item.str',
+    h: 'item.upgradesAvailable',
+    p: 'item.watk',
+    r: 'item.wdef',
+    U: 'item.itemId',
+    d: 'room.channel',
+    e: 'room.room',
+    f: 'shop.shopName',
+    g: 'shop.characterName'
+  }]
+>>>>>>> Stashed changes
 )
 router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
   try{
@@ -119,6 +165,11 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
             f: shop.shopName,
             g: shop.characterName
           }
+
+          Object.keys(obscureItem).forEach((key) => {
+            if (obscureItem[key] == -1) delete obscureItem[key]
+          })
+
           return obscureItem
         }, []))
       }, []))
