@@ -42,7 +42,7 @@ router.get('/world/:worldId/rooms', async (req, res, next) => {
     const rooms = await Room.findRooms(worldId)
     res.success(rooms)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })
@@ -147,11 +147,17 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
             d: room.channel,
             e: room.room,
             f: shop.shopName,
-            g: shop.characterName
+            g: shop.characterName,
+            I: item.potential1,
+            J: item.potential2,
+            K: item.potential3,
+            L: item.bpotential1,
+            M: item.bpotential2,
+            N: item.bpotential3
           }
 
           Object.keys(obscureItem).forEach((key) => {
-            if (obscureItem[key] == -1) delete obscureItem[key]
+            if (obscureItem[key] == -1 || obscureItem[key] === undefined) delete obscureItem[key]
           })
 
           return obscureItem
@@ -164,7 +170,7 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
     ]
     res.success(legacyResponse)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })
@@ -195,7 +201,7 @@ router.get('/world/:worldId/room/:roomId', async (req, res, next) => {
     const rooms = await Room.findRoom(worldId, 1, roomId)
     res.success(rooms)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })
@@ -250,7 +256,16 @@ API.registerCall(
       numberOfEnhancements: 0,
       numberOfPlusses: 0,
       only: 0,
-      potentials: 0,
+      potentials: [
+        {
+          "Message": "#prop% chance to ignore #ignoreDAM damage when attacked.",
+          "Modifiers":[{"Item1":"prop","Item2":"30"},{"Item1":"ignoreDAM","Item2":"51"}],
+          "OptionType":20,
+          "id":20353,
+          "target":"potential1",
+          "line":"30% chance to ignore 51 damage when attacked."
+        }
+      ],
       price: 0,
       quantity: 0,
       rarity: 0,
@@ -274,7 +289,7 @@ router.get('/world/:worldId/room/:roomId/items', async (req, res, next) => {
     const items = await Item.findAll({room: roomId, server: worldId})
     res.success(items)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })

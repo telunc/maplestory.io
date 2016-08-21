@@ -24,7 +24,7 @@ router.get('/item/:itemId/icon', async (req, res, next) => {
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })
@@ -47,7 +47,7 @@ router.get('/item/:itemId/iconRaw', async (req, res, next) => {
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })

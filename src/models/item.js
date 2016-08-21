@@ -49,6 +49,17 @@ function Connect() {
 export default class Item {
   constructor(rethinkData){
     this._data = rethinkData;
+
+    if(this.potentials) {
+      this.potentials.forEach((potential) => {
+        potential.line = potential.Message
+        potential.Modifiers.forEach(modifier => {
+          potential.line = potential.line.replace(`#${modifier.Item1}`, modifier.Item2)
+        })
+
+        this[potential.target] = potential
+      })
+    }
   }
 
   toJSON(){
@@ -279,6 +290,25 @@ export default class Item {
 
   get potentials(){
     return this._data.potentials
+  }
+
+  get potential1(){
+    return this.potential1
+  }
+  get potential2(){
+    return this.potential2
+  }
+  get potential3(){
+    return this.potential3
+  }
+  get bpotential1(){
+    return this.bpotential1
+  }
+  get bpotential2(){
+    return this.bpotential2
+  }
+  get bpotential3(){
+    return this.bpotential3
   }
 
   get price(){
