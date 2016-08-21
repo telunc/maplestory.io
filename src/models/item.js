@@ -292,25 +292,6 @@ export default class Item {
     return this._data.potentials
   }
 
-  get potential1(){
-    return this.potential1
-  }
-  get potential2(){
-    return this.potential2
-  }
-  get potential3(){
-    return this.potential3
-  }
-  get bpotential1(){
-    return this.bpotential1
-  }
-  get bpotential2(){
-    return this.bpotential2
-  }
-  get bpotential3(){
-    return this.bpotential3
-  }
-
   get price(){
     return this._data.price
   }
