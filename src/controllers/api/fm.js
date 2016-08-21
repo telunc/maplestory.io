@@ -258,12 +258,12 @@ API.registerCall(
       only: 0,
       potentials: [
         {
-          "Message": "#prop% chance to ignore #ignoreDAM damage when attacked.",
-          "Modifiers":[{"Item1":"prop","Item2":"30"},{"Item1":"ignoreDAM","Item2":"51"}],
-          "OptionType":20,
-          "id":20353,
-          "target":"potential1",
-          "line":"30% chance to ignore 51 damage when attacked."
+          'Message': '#prop% chance to ignore #ignoreDAM damage when attacked.',
+          'Modifiers':[{'Item1':'prop','Item2':'30'},{'Item1':'ignoreDAM','Item2':'51'}],
+          'OptionType':20,
+          'id':20353,
+          'target':'potential1',
+          'line':'30% chance to ignore 51 damage when attacked.'
         }
       ],
       price: 0,
