@@ -109,7 +109,7 @@ export default class Item {
       rarity: this.rarity,
       room: this.room,
       server: this.server,
-      shopID: this.shopID,
+      shopId: this.shopId,
       shopName: this.shopName,
       speed: this.speed,
       str: this.str,
@@ -312,7 +312,7 @@ export default class Item {
     return this._data.server
   }
 
-  get shopID(){
+  get shopId(){
     return this._data.shopId
   }
 
