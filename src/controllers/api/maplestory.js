@@ -55,14 +55,14 @@ router.get('/item/:itemId/iconRaw', async (req, res, next) => {
 
 API.registerCall(
   '/api/maplestory/world/:world/icon',
-  'Gets the raw icon of an item',
-  API.createParameter(':itemId', 'number', 'The ID of the item'),
+  'Gets the raw icon of a world',
+  API.createParameter(':worldName', 'string', 'The ID of the item'),
   'Image/PNG'
 )
 
-router.get('/world/:world/icon', async (req, res, next) => {
+router.get('/world/:worldName/icon', async (req, res, next) => {
   try{
-    var worldName = req.params.world
+    var worldName = req.params.worldName
     const world = await World.findFirst({id: worldName.toLowerCase()})
 
     if(!world || !world.icon) return res.status(404).send('Couldn\'t find an icon for that world.')
