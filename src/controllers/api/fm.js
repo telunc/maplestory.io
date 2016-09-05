@@ -153,7 +153,8 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
             K: item.potential3 ? item.potential3.line : undefined,
             L: item.bpotential1 ? item.bpotential1.line : undefined,
             M: item.bpotential2 ? item.bpotential2.line : undefined,
-            N: item.bpotential3 ? item.bpotential3.line : undefined
+            N: item.bpotential3 ? item.bpotential3.line : undefined,
+            Y: item.isCash
           }
 
           Object.keys(obscureItem).forEach((key) => {

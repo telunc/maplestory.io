@@ -129,6 +129,10 @@ export default class Item {
     return this._data.Cash
   }
 
+  get isCash() {
+    return ((this._data.Cash && this._data.Cash.cash) ? 1 : 0)
+  }
+
   get equip(){
     return this._data.Equip
   }
