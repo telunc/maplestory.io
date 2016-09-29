@@ -16,17 +16,14 @@ RUN npm install --production
 COPY less /usr/src/app/less
 COPY lib /usr/src/app/lib/
 COPY public /usr/src/app/public
+COPY teleport.sh /etc/init.d/teleport
 
 RUN mkdir /opt/teleport && \
  cd /opt/teleport && \
  wget https://github.com/gravitational/teleport/releases/download/v1.1.0/teleport-v1.1.0-linux-amd64-bin.tar.gz && \
  tar -zxvf teleport-v1.1.0-linux-amd64-bin.tar.gz && \
  cd teleport && \
- make install
-
-COPY teleport.conf /etc/init/teleport.conf
-
-# Verify teleport works / starts up.
-RUN start teleport && ps -ax | grep teleport
+ make install && \
+ chmod +x /etc/init.d/teleport
 
 CMD [ "npm", "start" ]
