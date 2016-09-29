@@ -8,7 +8,7 @@
 # Description:       <DESCRIPTION>
 ### END INIT INFO
 
-SCRIPT="teleport start --roles=node --nodename=$DOCKERCLOUD_SERVICE_FQDN --auth-server=$TELEPORT_AUTH_SERVER_IP --token=$TELEPORT_AUTH_TOKEN"
+SCRIPT="teleport start --roles=node --nodename=$DOCKERCLOUD_CONTAINER_FQDN --auth-server=$TELEPORT_AUTH_SERVER_IP --token=$TELEPORT_AUTH_TOKEN"
 RUNAS="root"
 NAME="teleport"
 
