@@ -21,6 +21,7 @@ RUN mkdir /opt/teleport && \
  cd /opt/teleport && \
  wget https://github.com/gravitational/teleport/releases/download/v1.1.0/teleport-v1.1.0-linux-amd64-bin.tar.gz && \
  tar -zxvf teleport-v1.1.0-linux-amd64-bin.tar.gz && \
+ cd teleport && \
  make install
 
 COPY teleport.conf /etc/init/teleport.conf
