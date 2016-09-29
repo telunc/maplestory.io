@@ -16,7 +16,7 @@ RUN npm install --production
 COPY less /usr/src/app/less
 COPY lib /usr/src/app/lib/
 COPY public /usr/src/app/public
-COPY teleport.sh /etc/init.d/teleport
+COPY start.sh /opt/start.sh
 
 RUN mkdir /opt/teleport && \
  cd /opt/teleport && \
@@ -24,6 +24,6 @@ RUN mkdir /opt/teleport && \
  tar -zxvf teleport-v1.1.0-linux-amd64-bin.tar.gz && \
  cd teleport && \
  make install && \
- chmod +x /etc/init.d/teleport
+ chmod +x /opt/start.sh
 
-CMD [ "npm", "start" ]
+CMD [ "/bin/bash", "/opt/start.sh" ]
