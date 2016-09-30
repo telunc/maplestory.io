@@ -2,6 +2,7 @@ import express from 'express';
 import r from 'rethinkdb'
 import Promise from 'bluebird'
 import MapleItem from '../../models/mapleitem'
+import World from '../../models/world'
 import API from '../../lib/API'
 
 const router = express.Router();
@@ -24,7 +25,7 @@ router.get('/item/:itemId/icon', async (req, res, next) => {
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })
@@ -47,7 +48,30 @@ router.get('/item/:itemId/iconRaw', async (req, res, next) => {
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
+  '/api/maplestory/world/:world/icon',
+  'Gets the raw icon of a world',
+  API.createParameter(':worldName', 'string', 'The ID of the item'),
+  'Image/PNG'
+)
+
+router.get('/world/:worldName/icon', async (req, res, next) => {
+  try{
+    var worldName = req.params.worldName
+    const world = await World.findFirst({id: worldName.toLowerCase()})
+
+    if(!world || !world.icon) return res.status(404).send('Couldn\'t find an icon for that world.')
+
+    var iconData = new Buffer(world.icon, 'base64')
+    res.set('Content-Type', 'image/png')
+    res.send(iconData)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
   }
 })

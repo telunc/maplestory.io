@@ -49,6 +49,17 @@ function Connect() {
 export default class Item {
   constructor(rethinkData){
     this._data = rethinkData;
+
+    if(this.potentials) {
+      this.potentials.forEach((potential) => {
+        potential.line = potential.Message
+        potential.Modifiers.forEach(modifier => {
+          potential.line = potential.line.replace(`#${modifier.Item1}`, modifier.Item2)
+        })
+
+        this[potential.target] = potential
+      })
+    }
   }
 
   toJSON(){
@@ -98,7 +109,7 @@ export default class Item {
       rarity: this.rarity,
       room: this.room,
       server: this.server,
-      shopID: this.shopID,
+      shopId: this.shopId,
       shopName: this.shopName,
       speed: this.speed,
       str: this.str,
@@ -116,6 +127,10 @@ export default class Item {
 
   get cash(){
     return this._data.Cash
+  }
+
+  get isCash() {
+    return ((this._data.Cash && this._data.Cash.cash) ? 1 : 0)
   }
 
   get equip(){
@@ -301,7 +316,7 @@ export default class Item {
     return this._data.server
   }
 
-  get shopID(){
+  get shopId(){
     return this._data.shopId
   }
 
