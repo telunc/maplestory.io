@@ -27,15 +27,15 @@ API.registerCall(
   'Gets the ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   {
-    "id":"SomePerson123",
-    "job":"Magician",
-    "ranking":"1",
-    "world":"Khaini",
-    "level":255,
-    "exp":4339186,
-    "rankMovement":1,
-    "rankDirection":"up",
-    "avatar":"/api/character/SomePerson123/avatar"
+    'id':'SomePerson123',
+    'job':'Magician',
+    'ranking':'1',
+    'world':'Khaini',
+    'level':255,
+    'exp':4339186,
+    'rankMovement':1,
+    'rankDirection':'up',
+    'avatar':'/api/character/SomePerson123/avatar'
   }
 )
 
@@ -52,7 +52,7 @@ router.get('/:characterName', async (req, res, next) => {
     let tries = 0
     while (!(rankingListing = await rp(options)) && ++tries < 5);
 
-    const searchRegex = /<tr>[ \r\n\t]*<td>[0-9]*<\/td>[ \r\n\t]*<td> <img class=\"avatar\"[ \r\n\t]* src=\"([^\"]*)\"><\/td>[ \r\n\t]*<td>(<img src=\"http:\/\/nxcache.nexon.net\/maplestory\/img\/bg\/bg-immigrant.png\"\/><br \/>)*([^<]*)<\/td>[ \r\n\t]*<td><a class=\"([^\"]*)\" href=\"([^\"]*)\" title=\"([^\"]*)\">&nbsp;<\/a><\/td>[ \r\n\t]*<td><img class=\"job\" src=\"([^\"]*)\" alt=\"([^\"]*)\" title=\"[^\"]*\"><\/td>[ \t\r\n]*<td class="level-move">[ \t\r\n]*([0-9]*)<br \/>[ \r\n\t]*\(([0-9]*)\)[ \r\n\t]*<br \/>[ \r\n\t]*<div class=\"rank-([^\"]*)\">([^<]*)<\/div>*/igm
+    const searchRegex = /<tr>[ \r\n\t]*<td>[0-9]*<\/td>[ \r\n\t]*<td> <img class=\'avatar\'[ \r\n\t]* src=\'([^\']*)\'><\/td>[ \r\n\t]*<td>(<img src=\'http:\/\/nxcache.nexon.net\/maplestory\/img\/bg\/bg-immigrant.png\'\/><br \/>)*([^<]*)<\/td>[ \r\n\t]*<td><a class=\'([^\']*)\' href=\'([^\']*)\' title=\'([^\']*)\'>&nbsp;<\/a><\/td>[ \r\n\t]*<td><img class=\'job\' src=\'([^\']*)\' alt=\'([^\']*)\' title=\'[^\']*\'><\/td>[ \t\r\n]*<td class='level-move'>[ \t\r\n]*([0-9]*)<br \/>[ \r\n\t]*\(([0-9]*)\)[ \r\n\t]*<br \/>[ \r\n\t]*<div class=\'rank-([^\']*)\'>([^<]*)<\/div>*/igm
 
     let characters = []
     let match
