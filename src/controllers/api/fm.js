@@ -4,19 +4,19 @@ import Promise from 'bluebird'
 import Room from '../../models/room'
 import Item from '../../models/item'
 import API from '../../lib/API'
-import apicache from 'apicache'
-import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY } from '../../environment'
+import rediscache from 'express-redis-cache'
+import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../../environment'
 
 const router = express.Router();
 
-const caching = apicache.options({
-  debug: ENV.NODE_ENV == 'development',
-  defaultDuration: 60000,
-  enabled: true
-}).middleware
+const caching = rediscache({
+  host: REDIS_HOST,
+  port: REDIS_PORT,
+  expire: 60
+})
 
 //Try to cache the results for at least 60 seconds as CPU is also costly
-router.use(caching())
+router.use(caching.route())
 
 API.registerCall(
   '/api/fm/world/:worldId/rooms',
