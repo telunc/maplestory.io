@@ -26,4 +26,7 @@ RUN mkdir /opt/teleport && \
  make install && \
  chmod +x /opt/start.sh
 
+RUN apt-get update && \
+ apt-get install -y redis-server
+
 CMD [ "/bin/bash", "/opt/start.sh" ]
