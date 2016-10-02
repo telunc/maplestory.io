@@ -9,14 +9,16 @@ import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } f
 
 const router = express.Router();
 
-const caching = rediscache({
-  host: REDIS_HOST,
-  port: REDIS_PORT,
-  expire: 60
-})
+if (REDIS_HOST && REDIS_PORT) {
+  const caching = rediscache({
+    host: REDIS_HOST,
+    port: REDIS_PORT,
+    expire: 60
+  })
 
-//Try to cache the results for at least 60 seconds as CPU is also costly
-router.use(caching.route())
+  //Try to cache the results for at least 60 seconds as CPU is also costly
+  router.use(caching.route())
+}
 
 API.registerCall(
   '/api/fm/world/:worldId/rooms',
