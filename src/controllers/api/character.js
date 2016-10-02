@@ -10,8 +10,9 @@ import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } f
 
 const router = express.Router()
 
+let redisCache
 if (REDIS_HOST && REDIS_PORT) {
-  const redisCache = cacheManager.caching({
+  redisCache = cacheManager.caching({
     store: redisStore,
     host: REDIS_HOST,
     port: REDIS_PORT,

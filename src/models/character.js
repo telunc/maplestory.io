@@ -19,11 +19,13 @@ export default class Character {
   }
 
   static async insert(data) {
+    const connection = await Connect()
     data.createdAt = new Date()
     return r.db('maplestory').table('characters').insert(data).run(connection)
   }
 
   static async replace(id, data) {
+    const connection = await Connect()
     data.createdAt = new Date()
     return r.db('maplestory').table('characters').get(id).replace(data).run(connection)
   }
@@ -33,7 +35,7 @@ export default class Character {
    */
   static async findFirst(filter){
     const connection = await Connect()
-    if (filter instanceof string) {
+    if (filter instanceof String) {
       const entry = await GetCharacter(filter).run(connection)
       if(entry) {
         const character = new Character(entry)
