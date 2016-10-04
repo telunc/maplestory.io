@@ -4,24 +4,32 @@ import Promise from 'bluebird'
 import Room from '../../models/room'
 import Item from '../../models/item'
 import API from '../../lib/API'
-import rediscache from 'express-redis-cache'
+import apicache from 'apicache'
+import redis from 'redis'
 import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../../environment'
 
 const router = express.Router();
 
+let redisClient
 if (REDIS_HOST && REDIS_PORT) {
-  console.log('Redis enabled')
-  const caching = rediscache({
+  redisClient = redis.createClient({
     host: REDIS_HOST,
-    port: REDIS_PORT,
-    expire: 60
+    port: REDIS_PORT
   })
-
-  //Try to cache the results for at least 60 seconds as CPU is also costly
-  router.use(caching.route())
+  console.warn('Redis caching enabled')
 } else {
   console.warn('Redis not enabled')
 }
+
+const caching = apicache.options({
+    debug: ENV.NODE_ENV == 'development',
+    defaultDuration: 60000,
+    enabled: true,
+    redisClient
+  }).middleware
+
+  //Try to cache the results for at least 60 seconds as CPU is also costly
+router.use(caching())
 
 API.registerCall(
   '/api/fm/world/:worldId/rooms',

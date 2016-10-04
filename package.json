@@ -51,12 +51,10 @@
     "supertest": "^1.2.0"
   },
   "dependencies": {
-    "apicache": "0.0.14",
+    "apicache": "0.2.2",
     "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.6.1",
     "bluebird": "^3.3.5",
-    "cache-manager": "^2.1.2",
-    "cache-manager-redis": "^0.2.4",
     "cheerio": "^0.20.0",
     "compression": "^1.6.2",
     "core-js": "^2.2.2",
@@ -65,8 +63,8 @@
     "ejs": "^2.4.2",
     "express": "4.13.4",
     "express-less": "0.0.8",
-    "express-redis-cache": "^0.4.2",
     "lodash": "^4.12.0",
+    "node-redis": "^0.1.7",
     "progress": "^1.1.8",
     "raven": "^0.10.0",
     "request": "^2.74.0",
