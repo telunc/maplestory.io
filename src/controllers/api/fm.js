@@ -10,6 +10,7 @@ import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } f
 const router = express.Router();
 
 if (REDIS_HOST && REDIS_PORT) {
+  console.log('Redis enabled')
   const caching = rediscache({
     host: REDIS_HOST,
     port: REDIS_PORT,
@@ -18,6 +19,8 @@ if (REDIS_HOST && REDIS_PORT) {
 
   //Try to cache the results for at least 60 seconds as CPU is also costly
   router.use(caching.route())
+} else {
+  console.warn('Redis not enabled')
 }
 
 API.registerCall(
