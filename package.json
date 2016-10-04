@@ -67,6 +67,7 @@
     "express-less": "0.0.8",
     "lodash": "^4.12.0",
     "node-redis": "^0.1.7",
+    "redis": "2.6.2",
     "progress": "^1.1.8",
     "raven": "^0.10.0",
     "request": "^2.74.0",
