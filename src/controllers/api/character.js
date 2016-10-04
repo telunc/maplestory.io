@@ -2,28 +2,10 @@ import express from 'express';
 import r from 'rethinkdb'
 import Promise from 'bluebird'
 import API from '../../lib/API'
-import rp from 'request-promise'
 import Character from '../../models/character'
-import cacheManager from 'cache-manager'
-import redisStore from 'cache-manager-redis'
-import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../../environment'
+import rp from 'request-promise'
 
 const router = express.Router()
-
-if (REDIS_HOST && REDIS_PORT) {
-  const redisCache = cacheManager.caching({
-    store: redisStore,
-    host: REDIS_HOST,
-    port: REDIS_PORT,
-    db: 0,
-    ttl: 600
-  })
-
-  redisCache.store.events.on('redisError', function(error) {
-      // handle error here
-      console.log(error);
-  });
-}
 
 /*API.registerCall(
   '/api/character/:characterName',
@@ -44,83 +26,54 @@ if (REDIS_HOST && REDIS_PORT) {
 
 router.get('/:characterName', async (req, res, next) => {
   try{
+    const ranking = 'overall'
+    const characterName = req.params.characterName
+    const character = await Character.GetCharacter(characterName, ranking)
+
+    console.log('Found', character)
+    res.send(character)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+router.get('/:characterName/fame', async (req, res, next) => {
+  try{
     const ranking = 'fame'
     const characterName = req.params.characterName
-    const options = {
-      uri: `http://maplestory.nexon.net/rankings/${ranking}-ranking/legendary?pageIndex=1&character_name=${characterName}&search=true`,
-    };
+    const character = await Character.GetCharacter(characterName, ranking)
 
-    let rankingListing
+    console.log('Found', character)
+    res.send(character)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+router.get('/:characterName/avatar', async (req, res, next) => {
+  try{
+    const ranking = 'fame'
+    const characterName = req.params.characterName
+    const character = Character.GetCharacter(characterName, ranking, true)
+
+    const options = {
+      uri: character.avatar,
+    }
+
+    let avatarResults
 
     let tries = 0
-    while (!rankingListing && ++tries < 5) {
+    while (!avatarResults && ++tries < 5) {
       try {
-        rankingListing = await rp(options)
+        avatarResults = await rp(options)
       } catch(ex) {
         console.warn('Something happened getting rankings: ', rankingListing)
       }
     }
 
-    const searchRegex = /<tr>[ \r\n\t]*<td>([0-9]*)<\/td>[ \r\n\t]*<td> <img class=\"avatar\"[ \r\n\t]* src=\"([^\"]*)\"><\/td>[ \r\n\t]*<td>(<img src=\"http:\/\/nxcache.nexon.net\/maplestory\/img\/bg\/bg-immigrant.png\"\/><br \/>)*([^<]*)<\/td>[ \r\n\t]*<td><a class=\"([^\"]*)\" href=\"([^\"]*)\" title=\"([^\"]*)\">&nbsp;<\/a><\/td>[ \r\n\t]*<td><img class=\"job\" src=\"([^\"]*)\" alt=\"([^\"]*)\" title=\"[^\"]*\"><\/td>[ \t\r\n]*<td class="level-move">[ \t\r\n]*([0-9]*)<br \/>[ \r\n\t]*\(([0-9]*)\)[ \r\n\t]*<br \/>[ \r\n\t]*<div class=\"rank-([^\"]*)\">([^<]*)<\/div>*/igm
 
-    let characters = []
-    let match
-
-    console.log('Getting', characterName)
-    while (match = searchRegex.exec(rankingListing)) {
-      console.log(match)
-      const [
-        ,
-        rank,
-        avatar,
-        ,
-        characterName,
-        ,
-        ,
-        world,
-        jobIcon,
-        jobName,
-        level,
-        experience,
-        rankDirection,
-        rankDistance
-      ] = match
-
-      console.log(characterName, '-', level)
-
-
-      if (REDIS_HOST && REDIS_PORT) {
-        redisCache.set(`ranking-${ranking}-${characterName.toLowerCase()}-`, {
-          name: characterName,
-          job: jobName,
-          ranking: rank,
-          world: world,
-          level: level,
-          exp: experience,
-          rankMovement: rankDistance,
-          rankDirection: rankDirection,
-          realAvatar: avatar,
-          got: new Date()
-        })
-      }
-
-      characters.push({
-        name: characterName,
-        job: jobName,
-        ranking: rank,
-        world: world,
-        level: level,
-        exp: experience,
-        rankMovement: rankDistance,
-        rankDirection: rankDirection,
-        avatar: `/api/character/${characterName}/avatar`,
-        got: new Date()
-      })
-    }
-
-    const characterFound = characters.find((character) => character.name.toLowerCase() == characterName.toLowerCase())
-
-    res.send(characterFound)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
     console.log(ex, ex.stack)
