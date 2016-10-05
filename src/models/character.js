@@ -119,7 +119,7 @@ async function retryRequest(rpOptions, retryCount, catchMessage) {
 
   while (!results && ++tries < retryCount) {
     try {
-      results = await rp(rpOptions)
+      results = await rp(rpOptions) // eslint-disable-line babel/no-await-in-loop
     } catch (err) {
       if (catchMessage) console.warn(catchMessage)
       else console.warn(err)

@@ -17,7 +17,7 @@ API.registerCall(
     'ranking':'1',
     'world':'Khaini',
     'level':255,
-    'exp':"4339186",
+    'exp':'4339186',
     'rankMovement':1,
     'rankDirection':'up',
     'avatar':'/api/character/SomePerson123/avatar',
