@@ -20,7 +20,9 @@
                 "RETHINKDB_PORT": "28015",
                 "RETHINKDB_USER": "",
                 "RETHINKDB_PASS": "",
-                "RETHINKDB_DB": "maplestory"
+                "RETHINKDB_DB": "maplestory",
+                "REDIS_PORT_6379_TCP_ADDR": "127.0.0.1",
+                "REDIS_PORT_6379_TCP_PORT": "6379"
             },
             "externalConsole": false,
             "sourceMaps": false,
