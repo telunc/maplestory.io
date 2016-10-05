@@ -12,12 +12,12 @@ API.registerCall(
   'Gets the ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   {
-    'id':'SomePerson123',
+    'name':'SomePerson123',
     'job':'Magician',
     'ranking':'1',
     'world':'Khaini',
     'level':255,
-    'exp':4339186,
+    'exp':"4339186",
     'rankMovement':1,
     'rankDirection':'up',
     'avatar':'/api/character/SomePerson123/avatar',
@@ -44,7 +44,7 @@ API.registerCall(
   'Gets the fame ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   {
-    'id':'SomePerson123',
+    'name':'SomePerson123',
     'job':'Magician',
     'ranking':'1',
     'world':'Khaini',
