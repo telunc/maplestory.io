@@ -2,130 +2,92 @@ import express from 'express';
 import r from 'rethinkdb'
 import Promise from 'bluebird'
 import API from '../../lib/API'
-import rp from 'request-promise'
 import Character from '../../models/character'
-import cacheManager from 'cache-manager'
-import redisStore from 'cache-manager-redis'
-import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../../environment'
+import rp from 'request-promise'
 
 const router = express.Router()
 
-let redisCache
-if (REDIS_HOST && REDIS_PORT) {
-  redisCache = cacheManager.caching({
-    store: redisStore,
-    host: REDIS_HOST,
-    port: REDIS_PORT,
-    db: 0,
-    ttl: 600
-  })
-
-  redisCache.store.events.on('redisError', function(error) {
-      // handle error here
-      console.log(error);
-  });
-}
-
-/*API.registerCall(
+API.registerCall(
   '/api/character/:characterName',
   'Gets the ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   {
-    'id':'SomePerson123',
+    'name':'SomePerson123',
     'job':'Magician',
     'ranking':'1',
     'world':'Khaini',
     'level':255,
-    'exp':4339186,
+    'exp':'4339186',
     'rankMovement':1,
     'rankDirection':'up',
-    'avatar':'/api/character/SomePerson123/avatar'
+    'avatar':'/api/character/SomePerson123/avatar',
+    'got':'2016-10-05T04:48:21.537Z',
+    'avatarData':'data:image/png;base64,'
   }
-)*/
+)
 
 router.get('/:characterName', async (req, res, next) => {
   try{
-    const ranking = 'fame'
+    const ranking = 'overall'
     const characterName = req.params.characterName
-    const options = {
-      uri: `http://maplestory.nexon.net/rankings/${ranking}-ranking/legendary?pageIndex=1&character_name=${characterName}&search=true`,
-    };
+    const character = await Character.GetCharacter(characterName, ranking)
 
-    let rankingListing
-
-    let tries = 0
-    while (!rankingListing && ++tries < 5) {
-      try {
-        rankingListing = await rp(options)
-      } catch(ex) {
-        console.warn('Something happened getting rankings: ', rankingListing)
-      }
-    }
-
-    const searchRegex = /<tr>[ \r\n\t]*<td>([0-9]*)<\/td>[ \r\n\t]*<td> <img class=\"avatar\"[ \r\n\t]* src=\"([^\"]*)\"><\/td>[ \r\n\t]*<td>(<img src=\"http:\/\/nxcache.nexon.net\/maplestory\/img\/bg\/bg-immigrant.png\"\/><br \/>)*([^<]*)<\/td>[ \r\n\t]*<td><a class=\"([^\"]*)\" href=\"([^\"]*)\" title=\"([^\"]*)\">&nbsp;<\/a><\/td>[ \r\n\t]*<td><img class=\"job\" src=\"([^\"]*)\" alt=\"([^\"]*)\" title=\"[^\"]*\"><\/td>[ \t\r\n]*<td class="level-move">[ \t\r\n]*([0-9]*)<br \/>[ \r\n\t]*\(([0-9]*)\)[ \r\n\t]*<br \/>[ \r\n\t]*<div class=\"rank-([^\"]*)\">([^<]*)<\/div>*/igm
-
-    let characters = []
-    let match
-
-    console.log('Getting', characterName)
-    while (match = searchRegex.exec(rankingListing)) {
-      console.log(match)
-      const [
-        ,
-        rank,
-        avatar,
-        ,
-        characterName,
-        ,
-        ,
-        world,
-        jobIcon,
-        jobName,
-        level,
-        experience,
-        rankDirection,
-        rankDistance
-      ] = match
-
-      console.log(characterName, '-', level)
-
-
-      if (REDIS_HOST && REDIS_PORT) {
-        redisCache.set(`ranking-${ranking}-${characterName.toLowerCase()}-`, {
-          name: characterName,
-          job: jobName,
-          ranking: rank,
-          world: world,
-          level: level,
-          exp: experience,
-          rankMovement: rankDistance,
-          rankDirection: rankDirection,
-          realAvatar: avatar,
-          got: new Date()
-        })
-      }
-
-      characters.push({
-        name: characterName,
-        job: jobName,
-        ranking: rank,
-        world: world,
-        level: level,
-        exp: experience,
-        rankMovement: rankDistance,
-        rankDirection: rankDirection,
-        avatar: `/api/character/${characterName}/avatar`,
-        got: new Date()
-      })
-    }
-
-    const characterFound = characters.find((character) => character.name.toLowerCase() == characterName.toLowerCase())
-
-    res.send(characterFound)
+    res.send(character)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
     console.log(ex, ex.stack)
   }
+})
+
+API.registerCall(
+  '/api/character/:characterName/fame',
+  'Gets the fame ranking information of a character',
+  API.createParameter(':characterName', 'string', 'The name of the player to look up'),
+  {
+    'name':'SomePerson123',
+    'job':'Magician',
+    'ranking':'1',
+    'world':'Khaini',
+    'level':2377,
+    'rankMovement':1,
+    'rankDirection':'up',
+    'avatar':'/api/character/SomePerson123/fame',
+    'got':'2016-10-05T04:48:21.537Z',
+    'avatarData':'data:image/png;base64,'
+  }
+)
+
+router.get('/:characterName/fame', async (req, res, next) => {
+  try{
+    const ranking = 'fame'
+    const characterName = req.params.characterName
+    const character = await Character.GetCharacter(characterName, ranking)
+
+    res.send(character)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
+  '/api/character/:characterName/fame',
+  'Gets the fame ranking information of a character',
+  API.createParameter(':characterName', 'string', 'The name of the player to look up'),
+  'Image/PNG'
+)
+
+router.get('/:characterName/avatar', async (req, res, next) => {
+  const ranking = 'overall'
+  const characterName = req.params.characterName
+  const character = await Character.GetCharacter(characterName, ranking, true)
+
+  const base64Location = character.avatarData.indexOf('base64,')
+  const type = character.avatarData.substr(5, base64Location - 5)
+  const avatarData = character.avatarData.substr(base64Location + 7)
+  const characterAvatar = new Buffer(avatarData, 'base64')
+  res.set('Content-Type', type)
+  res.send(characterAvatar)
 })
 
 export default router

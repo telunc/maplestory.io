@@ -16,12 +16,12 @@ API.registerCall(
 
 router.get('/item/:itemId/icon', async (req, res, next) => {
   try{
-    var itemId = Number(req.params.itemId)
+    const itemId = Number(req.params.itemId)
     const item = await MapleItem.getFirst(itemId)
 
     if(!item || !item.Icon || !item.Icon.Icon) return res.status(404).send('Couldn\'t find an icon for that item.')
 
-    var iconData = new Buffer(item.Icon.Icon, 'base64')
+    const iconData = new Buffer(item.Icon.Icon, 'base64')
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
@@ -39,12 +39,12 @@ API.registerCall(
 
 router.get('/item/:itemId/iconRaw', async (req, res, next) => {
   try{
-    var itemId = Number(req.params.itemId)
+    const itemId = Number(req.params.itemId)
     const item = await MapleItem.getFirst(itemId)
 
     if(!item || !item.Icon || !item.Icon.IconRaw) return res.status(404).send('Couldn\'t find an icon for that item.')
 
-    var iconData = new Buffer(item.Icon.IconRaw, 'base64')
+    const iconData = new Buffer(item.Icon.IconRaw, 'base64')
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
@@ -62,12 +62,12 @@ API.registerCall(
 
 router.get('/world/:worldName/icon', async (req, res, next) => {
   try{
-    var worldName = req.params.worldName
+    const worldName = req.params.worldName
     const world = await World.findFirst({id: worldName.toLowerCase()})
 
     if(!world || !world.icon) return res.status(404).send('Couldn\'t find an icon for that world.')
 
-    var iconData = new Buffer(world.icon, 'base64')
+    const iconData = new Buffer(world.icon, 'base64')
     res.set('Content-Type', 'image/png')
     res.send(iconData)
   }catch(ex){
