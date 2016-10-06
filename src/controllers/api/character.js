@@ -71,7 +71,7 @@ router.get('/:characterName/fame', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/character/:characterName/fame',
+  '/api/character/:characterName/avatar',
   'Gets the fame ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   'Image/PNG'
