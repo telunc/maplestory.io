@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
 
-    <title>MapleStory IO</title>
-    <meta name="description" content="A simple MapleStory API for various services.">
-    <meta name="author" content="Inumedia / crrio">
-
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <title>MapleStory IO | API Documentation</title>
+    <meta name="description" content="An unofficial MapleStory API documentation for developers.">
+    <meta name="author" content="Crrio">
+    <meta property="og:url" content="http://maplestory.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MapleStory IO | API Documentation" />
+    <meta property="og:description" content="An unofficial MapleStory API documentation for developers." />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!--[if lt IE 9]>
@@ -18,7 +21,10 @@
   <body>
     <div class="container">
       <div class="content">
-        <div class="title intro-card">MapleStory IO</div>
+        <div class="intro-card">
+          <span class="title">MapleStory IO</span><br/>
+          <span class="sub-title">The unofficial MapleStory API Documentation for developers.</span>
+        </div>
         <div class="api-calls">
         <% calls.map(function(call){ %>
           <%- include('../partials/APICall', call) %>
