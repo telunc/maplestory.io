@@ -62,10 +62,10 @@ export default class Character {
       characters.push({
         name: characterName,
         job: jobName,
-        ranking: rank,
+        ranking: Number(rank),
         world: world,
         level: Number(level),
-        exp: experience,
+        exp: Number(experience),
         rankMovement: Number(rankDistance),
         rankDirection: rankDirection,
         avatar: `/api/character/${characterName}/avatar`,

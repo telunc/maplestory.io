@@ -14,10 +14,10 @@ API.registerCall(
   {
     'name':'SomePerson123',
     'job':'Magician',
-    'ranking':'1',
+    'ranking':1,
     'world':'Khaini',
     'level':255,
-    'exp':'4339186',
+    'exp':4339186,
     'rankMovement':1,
     'rankDirection':'up',
     'avatar':'/api/character/SomePerson123/avatar',
@@ -46,12 +46,12 @@ API.registerCall(
   {
     'name':'SomePerson123',
     'job':'Magician',
-    'ranking':'1',
+    'ranking':1,
     'world':'Khaini',
     'level':2377,
     'rankMovement':1,
     'rankDirection':'up',
-    'avatar':'/api/character/SomePerson123/fame',
+    'avatar':'/api/character/SomePerson123/avatar',
     'got':'2016-10-05T04:48:21.537Z',
     'avatarData':'data:image/png;base64,'
   }
