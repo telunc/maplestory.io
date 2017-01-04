@@ -65,7 +65,7 @@ API.registerCall(
   'Image/PNG'
 )
 
-router.get('/world/:worldName/icon', async (req, res, next) => {
+router.get('/:worldName/icon', async (req, res, next) => {
   try{
     const worldName = req.params.worldName
     const world = await World.findFirst({id: worldName.toLowerCase()})
