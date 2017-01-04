@@ -4,6 +4,9 @@ import Promise from 'bluebird'
 import MapleItem from '../../models/mapleitem'
 import World from '../../models/world'
 import API from '../../lib/API'
+import apicache from 'apicache'
+import redis from 'redis'
+import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../../environment'
 
 const router = express.Router();
 
