@@ -3,6 +3,7 @@ import r from 'rethinkdb'
 import Promise from 'bluebird'
 import Room from '../../models/room'
 import Item from '../../models/item'
+import Server from '../../models/server'
 import API from '../../lib/API'
 import apicache from 'apicache'
 import redis from 'redis'
@@ -32,6 +33,26 @@ const caching = apicache.options({
 router.use(caching())
 
 API.registerCall(
+  '/api/fm/world/:worldId',
+  'Gets a statistical data of a world.',
+  API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
+  {
+    itemCount: 1000000
+  }
+)
+router.get('/world/:worldId', async (req, res, next) => {
+  try{
+    var worldId = Number(req.params.worldId)
+    const world = await Server.findServer(Number(worldId))
+    res.send(world)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+
+API.registerCall(
   '/api/fm/world/:worldId/rooms',
   'Gets a list of rooms with the shops and items in a world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -54,6 +75,24 @@ router.get('/world/:worldId/rooms', async (req, res, next) => {
     var worldId = Number(req.params.worldId)
     const rooms = await Room.findRooms(worldId)
     res.success(rooms)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
+  '/api/fm/world/:worldId/itemCount',
+  'Gets a count of items in the world.',
+  API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
+  1000000
+)
+router.get('/world/:worldId/itemCount', async (req, res, next) => {
+  try{
+    var worldId = Number(req.params.worldId)
+    const itemCount = await Item.getCount({server: Number(worldId)})
+    console.log('Sending itemCount', itemCount)
+    res.send(itemCount.toString())
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)

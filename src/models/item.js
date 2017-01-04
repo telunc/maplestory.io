@@ -1,6 +1,23 @@
 import r from 'rethinkdb';
 import Promise from 'bluebird'
 
+function GetItemCount(filter) {
+  return r.db('maplestory').table('rooms').filter(filter || {}).concatMap(function(room){
+    return room('shops').values().concatMap(function(shop){
+      return shop('items')
+        .merge({
+          server: room('server'),
+          shopId: room('id').add('-').add(shop('id').coerceTo('string')),
+          channel: room('channel'),
+          createdAt: room('createTime'),
+          room: room('room'),
+          characterName: shop('characterName'),
+          shopName: shop('shopName'),
+        })
+    })
+  }).eqJoin('id', r.db('maplestory').table('items')).count()
+}
+
 function GetItems(filter){
   return r.db('maplestory').table('rooms').filter(filter || {}).concatMap(function(room){
     return room('shops').values().concatMap(function(shop){
@@ -368,5 +385,18 @@ export default class Item {
     const fullItems = await cursor.toArray()
     connection.close()
     return fullItems.map(entry => new Item(entry)).shift()
+  }
+
+  static async getCount(filter) {
+    console.log('Getting item count')
+    const connection = await Connect()
+    const cursor = await GetItemCount(filter).run(connection)
+    connection.close();
+    console.log(cursor);
+    return cursor;
+  }
+
+  static GetItemCount(filter) {
+    return GetItemCount(filter)
   }
 }

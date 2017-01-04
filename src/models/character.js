@@ -69,7 +69,7 @@ export default class Character {
         rankMovement: Number(rankDistance),
         rankDirection: rankDirection,
         avatar: `/api/character/${characterName}/avatar`,
-        avatarPromise: getAvatar(avatarOptions, 5, `Something happened trying to get ${characterName}'s avatar.`),
+        avatarPromise: getAvatar(avatarOptions, 2, `Something happened trying to get ${characterName}'s avatar.`),
         got: new Date()
       })
     }
