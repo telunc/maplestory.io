@@ -4,6 +4,7 @@ import Promise from 'bluebird'
 import Room from '../../models/room'
 import Item from '../../models/item'
 import Server from '../../models/server'
+import World from '../../models/world'
 import API from '../../lib/API'
 import apicache from 'apicache'
 import redis from 'redis'
@@ -40,8 +41,8 @@ API.registerCall(
     itemCount: 1000000,
     worlds: [
       {
-        Icon: "...",
-        id: "..."
+        Icon: '...',
+        id: '...'
       }
     ]
   }
