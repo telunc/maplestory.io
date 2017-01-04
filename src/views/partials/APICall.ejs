@@ -2,13 +2,16 @@
   <a class="fa fa-link without-underline api-link" aria-hidden="true" href="#<%= url %>" name="<%= url %>" alt="Direct link to this" title="Direct link to this"></a>
   <div class="api-path"><span class="get">GET</span> <%= url %></div>
   <div class="api-desc"><%= desc %></div>
+  <% if(params && params.length) { %>
   <div class="api-params">
     <ul>
-        <% params.map(function(param){ %>
+        <% params.map(function(param){
+          if (!param) return; %>
           <li class="api-param"><b class="api-param-name api-param-<%- param.type %>"><%= param.name %></b><span class="api-param-desc"><%= param.desc %></span></li>
         <% }) %>
     </ul>
   </div>
+  <% } %>
   <div class="api-example">
     <pre><%- example instanceof String ? exmaple : JSON.stringify(example, null, '  ').trim('\r') %></pre>
   </div>

@@ -16,7 +16,7 @@ export default class API {
       url: callUrl,
       exampleUrl: exampleUrl,
       desc: description,
-      params: (parameters instanceof Array ? parameters : [parameters]),
+      params: (parameters instanceof Array ? parameters : [parameters]).filter((item) => item),
       example: example
     })
   }

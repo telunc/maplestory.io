@@ -8,12 +8,13 @@ import compression from 'compression'
 
 const router = express.Router();
 
-var oldRouteTest = new RegExp('\/api\/fm\/world\/([0-9]*)\/rooms\/legacy', 'g')
+var oldRouteTest = new RegExp('\/fm\/world\/([0-9]*)\/rooms\/legacy', '')
 //Convert objects appropriately
 router.use('/', async (req, res, next) => {
-
   if(oldRouteTest.test(req.url)) {
-    req.url = '/api/world/' + oldRouteTest.exec(req.url)[1] + '/market/legacy'
+    var worldId = oldRouteTest.exec(req.url)[1]
+    console.log('Redirecting (old) legacy call for ' + worldId)
+    res.redirect('/api/world/' + worldId + '/market/legacy')
   }
 
   res.success = (model) => {

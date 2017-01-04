@@ -80,7 +80,7 @@ router.get('/:itemId/iconRaw', async (req, res, next) => {
 API.registerCall(
   '/api/item/list',
   'Gets a listing of all items we know of',
-  null,
+  [],
   [
     { id: 12345, name: 'Awesome Weapon' }
   ]
