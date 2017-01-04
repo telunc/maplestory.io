@@ -1,8 +1,8 @@
 import express from 'express';
 import r from 'rethinkdb'
 import Promise from 'bluebird'
-import FMApi from './api/fm'
-import Maplestory from './api/maplestory'
+import World from './api/world'
+import Item from './api/item'
 import Character from './api/character'
 import compression from 'compression'
 
@@ -26,8 +26,8 @@ router.use('/', async (req, res, next) => {
 //Try to compress the objects, because 5Mb per request is costly
 router.use(compression())
 
-router.use('/fm', FMApi)
-router.use('/maplestory', Maplestory)
+router.use('/world', World)
+router.use('/item', Item)
 router.use('/character', Character)
 
 export default router

@@ -33,14 +33,20 @@ const caching = apicache.options({
 router.use(caching())
 
 API.registerCall(
-  '/api/fm/world/:worldId',
+  '/api/world/:worldId',
   'Gets a statistical data of a world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   {
-    itemCount: 1000000
+    itemCount: 1000000,
+    worlds: [
+      {
+        Icon: "...",
+        id: "..."
+      }
+    ]
   }
 )
-router.get('/world/:worldId', async (req, res, next) => {
+router.get('/:worldId', async (req, res, next) => {
   try{
     var worldId = Number(req.params.worldId)
     const world = await Server.findServer(Number(worldId))
@@ -51,30 +57,23 @@ router.get('/world/:worldId', async (req, res, next) => {
   }
 })
 
-
 API.registerCall(
-  '/api/fm/world/:worldId/rooms',
-  'Gets a list of rooms with the shops and items in a world.',
-  API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
-  [
-    {
-        'shops': {
-            'shopId': {
-                'characterName': 'CharacterName',
-                'id': 'shopId',
-                'items': [
-                    'itemObject'
-                ]
-            }
-        }
-    }
-  ]
+  '/api/maplestory/world/:world/icon',
+  'Gets the raw icon of a world',
+  API.createParameter(':worldName', 'string', 'The ID of the item'),
+  'Image/PNG'
 )
-router.get('/world/:worldId/rooms', async (req, res, next) => {
+
+router.get('/world/:worldName/icon', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
-    const rooms = await Room.findRooms(worldId)
-    res.success(rooms)
+    const worldName = req.params.worldName
+    const world = await World.findFirst({id: worldName.toLowerCase()})
+
+    if(!world || !world.icon) return res.status(404).send('Couldn\'t find an icon for that world.')
+
+    const iconData = new Buffer(world.icon, 'base64')
+    res.set('Content-Type', 'image/png')
+    res.send(iconData)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
@@ -82,16 +81,15 @@ router.get('/world/:worldId/rooms', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/fm/world/:worldId/itemCount',
+  '/api/world/:worldId/market/itemCount',
   'Gets a count of items in the world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   1000000
 )
-router.get('/world/:worldId/itemCount', async (req, res, next) => {
+router.get('/:worldId/market/itemCount', async (req, res, next) => {
   try{
     var worldId = Number(req.params.worldId)
     const itemCount = await Item.getCount({server: Number(worldId)})
-    console.log('Sending itemCount', itemCount)
     res.send(itemCount.toString())
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
@@ -100,7 +98,7 @@ router.get('/world/:worldId/itemCount', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/fm/world/:worldId/rooms/legacy',
+  '/api/world/:worldId/market/legacy',
   'Gets all of the items in the world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   [{
@@ -147,7 +145,7 @@ API.registerCall(
     g: 'shop.characterName'
   }]
 )
-router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
+router.get('/:worldId/market/legacy', async (req, res, next) => {
   try{
     var worldId = Number(req.params.worldId)
     const rooms = await Room.findRooms(worldId)
@@ -229,7 +227,36 @@ router.get('/world/:worldId/rooms/legacy', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/fm/world/:worldId/room/:roomId',
+  '/api/world/:worldId/market/rooms',
+  'Gets a list of rooms with the shops and items in a world.',
+  API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
+  [
+    {
+        'shops': {
+            'shopId': {
+                'characterName': 'CharacterName',
+                'id': 'shopId',
+                'items': [
+                    'itemObject'
+                ]
+            }
+        }
+    }
+  ]
+)
+router.get('/:worldId/market/rooms', async (req, res, next) => {
+  try{
+    var worldId = Number(req.params.worldId)
+    const rooms = await Room.findRooms(worldId)
+    res.success(rooms)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
+  '/api/world/:worldId/market/room/:roomId',
   'Gets a list of shops and items in a specific room on a specific world.',
   [
     API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -247,7 +274,7 @@ API.registerCall(
       }
   }
 )
-router.get('/world/:worldId/room/:roomId', async (req, res, next) => {
+router.get('/:worldId/market/room/:roomId', async (req, res, next) => {
   try{
     var worldId = Number(req.params.worldId)
     var roomId = Number(req.params.roomId)
@@ -260,7 +287,7 @@ router.get('/world/:worldId/room/:roomId', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/fm/world/:worldId/room/:roomId/items',
+  '/api/world/:worldId/market/room/:roomId/items',
   'Gets a list of items in a specific room on a specific world.',
   [
     API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -335,7 +362,7 @@ API.registerCall(
     }
   ]
 )
-router.get('/world/:worldId/room/:roomId/items', async (req, res, next) => {
+router.get('/:worldId/market/room/:roomId/items', async (req, res, next) => {
   try{
     var worldId = Number(req.params.worldId)
     var roomId = Number(req.params.roomId)
@@ -348,7 +375,7 @@ router.get('/world/:worldId/room/:roomId/items', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/fm/world/:worldId/rooms/items',
+  '/api/world/:worldId/market/items',
   'Gets a list of items in a specific room on a specific world.',
   [
     API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -423,7 +450,7 @@ API.registerCall(
     }
   ]
 )
-router.get('/world/:worldId/rooms/items', async (req, res, next) => {
+router.get('/:worldId/market/items', async (req, res, next) => {
   try{
     var worldId = Number(req.params.worldId)
     var roomId = Number(req.params.roomId)
