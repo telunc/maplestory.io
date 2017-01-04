@@ -7,6 +7,27 @@ import API from '../../lib/API'
 
 const router = express.Router();
 
+let redisClient
+if (REDIS_HOST && REDIS_PORT) {
+  redisClient = redis.createClient({
+    host: REDIS_HOST,
+    port: REDIS_PORT
+  })
+  console.warn('Redis caching enabled')
+} else {
+  console.warn('Redis not enabled')
+}
+
+const caching = apicache.options({
+    debug: ENV.NODE_ENV == 'development',
+    defaultDuration: 43200000,
+    enabled: true,
+    redisClient
+  }).middleware
+
+//Try to cache the results for at least 12 hours as CPU is also costly
+router.use(caching())
+
 API.registerCall(
   '/api/item/:itemId/icon',
   'Gets the inventory icon of an item',
@@ -47,6 +68,25 @@ router.get('/:itemId/iconRaw', async (req, res, next) => {
     const iconData = new Buffer(item.Icon.IconRaw, 'base64')
     res.set('Content-Type', 'image/png')
     res.send(iconData)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
+  '/api/item/list',
+  'Gets a listing of all items we know of',
+  null,
+  [
+    { id: 12345, name: 'Awesome Weapon' }
+  ]
+)
+
+router.get('/list', async (req, res, next) => {
+  try{
+    const items = await MapleItem.getList()
+    res.send(items)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
