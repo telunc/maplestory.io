@@ -51,7 +51,7 @@
     "supertest": "^1.2.0"
   },
   "dependencies": {
-    "apicache": "0.2.2",
+    "apicache": "0.7.4",
     "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.6.1",
     "bluebird": "3.4.6",

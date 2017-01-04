@@ -59,7 +59,7 @@ router.get('/:worldId', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/maplestory/world/:world/icon',
+  '/api/world/:worldName/icon',
   'Gets the raw icon of a world',
   API.createParameter(':worldName', 'string', 'The ID of the item'),
   'Image/PNG'
