@@ -4,7 +4,7 @@
   "description": "An API end point for processing data from the MapleStory RPG.",
   "main": "lib/index.js",
   "scripts": {
-    "start": "DEBUG=node-dockercloud:* node lib/index.js",
+    "start": "node lib/index.js",
     "development": "./scripts/development",
     "integration": "mocha test/integration",
     "e2e": "mocha -t 10000 test/e2e",

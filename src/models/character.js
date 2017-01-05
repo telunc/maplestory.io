@@ -4,6 +4,7 @@ import rp from 'request-promise'
 import cacheManager from 'cache-manager'
 import redisStore from 'cache-manager-redis'
 import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../environment'
+import FileSystem from 'fs'
 
 export default class Character {
   constructor(rethinkData){
@@ -34,7 +35,7 @@ export default class Character {
       searchRegex = /<tr>[ \r\n\t]*<td>([0-9]*)<\/td>[ \r\n\t]*<td> <img class=\"avatar\"[ \r\n\t]* src=\"([^\"]*)\"><\/td>[ \r\n\t]*<td>(<img src=\"http:\/\/nxcache.nexon.net\/maplestory\/img\/bg\/bg-immigrant.png\"\/><br \/>)*([^<]*)<\/td>[ \r\n\t]*<td><a class=\"([^\"]*)\" href=\"([^\"]*)\" title=\"([^\"]*)\">&nbsp;<\/a><\/td>[ \r\n\t]*<td><img class=\"job\" src=\"([^\"]*)\" alt=\"([^\"]*)\" title=\"[^\"]*\"><\/td>[ \t\r\n]*<td class="level-move">[ \t\r\n]*([0-9]*)*/igm
     }
 
-    let characters = []
+    var characters = []
     let match
 
     while (match = searchRegex.exec(rankingListing)) {
@@ -69,7 +70,7 @@ export default class Character {
         rankMovement: Number(rankDistance),
         rankDirection: rankDirection,
         avatar: `/api/character/${characterName}/avatar`,
-        avatarPromise: getAvatar(avatarOptions, 2, `Something happened trying to get ${characterName}'s avatar.`),
+        avatarPromise: getAvatar(avatarOptions, 1, `Something happened trying to get ${characterName}'s avatar.`),
         got: new Date()
       })
     }
@@ -113,24 +114,33 @@ function getCacheName(ranking, characterName) {
   return `ranking-${ranking}-${characterName.toLowerCase()}`
 }
 
-async function retryRequest(rpOptions, retryCount, catchMessage) {
+async function retryRequest(rpOptions, retryCount, catchMessage, currentRetryCount) {
   let results
-  let tries = 0
 
-  while (!results && ++tries < retryCount) {
-    try {
-      results = await rp(rpOptions) // eslint-disable-line babel/no-await-in-loop
-    } catch (err) {
-      if (catchMessage) console.warn(catchMessage)
-      else console.warn(err)
-    }
+  if (Number.isNaN(currentRetryCount)) currentRetryCount = 0
+
+  if (currentRetryCount >= retryCount) return
+
+  try {
+    results = await rp(rpOptions)
+  } catch (err) {
+    if (catchMessage) console.warn(catchMessage)
+    else console.warn(err)
+    return retryRequest(rpOptions, retryCount, catchMessage, currentRetryCount + 1)
   }
 
   return results
 }
 
-async function getAvatar(rpOptions, retryCount, catchMessage)
- {
+async function getNoAvatar() {
+  const noAvatarData = await FileSystem.readFileAsync('./public/images/no-avatar.png')
+  const prefix = 'data:image/png;base64,'
+  const buff = new Buffer(noAvatarData, 'binary')
+  const noAvatar = prefix + buff.toString('base64')
+  return noAvatar
+}
+
+async function getAvatar(rpOptions, retryCount, catchMessage) {
   rpOptions.resolveWithFullResponse = true
   rpOptions.encoding = 'binary'
   rpOptions.transform = (body, response, isFullResponse) => {
@@ -141,5 +151,12 @@ async function getAvatar(rpOptions, retryCount, catchMessage)
     return result
   }
 
-  return await retryRequest(rpOptions, retryCount, catchMessage)
+  var avatarData = await retryRequest(rpOptions, retryCount, catchMessage)
+
+  if (!avatarData) {
+    console.warn('No avatar, going with default')
+    return await getNoAvatar()
+  } else {
+    return await avatarData
+  }
 }

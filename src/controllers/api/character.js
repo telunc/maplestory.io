@@ -31,6 +31,7 @@ router.get('/:characterName', async (req, res, next) => {
     const ranking = 'overall'
     const characterName = req.params.characterName
     const character = await Character.GetCharacter(characterName, ranking)
+    if (!character) return res.status(400).send({ error: 'Could not find character' })
 
     res.send(character)
   }catch(ex){

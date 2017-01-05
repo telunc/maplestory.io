@@ -6,6 +6,10 @@ import Index from './controllers/index'
 import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY } from './environment'
 import expressLess from 'express-less'
 
+import Promise from 'bluebird'
+import fs from 'fs'
+Promise.promisifyAll(fs)
+
 var app = express()
 
 app.set('view engine', 'ejs')

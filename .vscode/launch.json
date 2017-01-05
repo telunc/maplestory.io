@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/babel-cli/lib/babel-node.js",
             "stopOnEntry": false,
-            "args": ["${workspaceRoot}/src/index.js"],
+            "args": ["${workspaceRoot}/src/index.js", "--source-maps"],
             "cwd": "${workspaceRoot}",
             "preLaunchTask": null,
             "runtimeExecutable": null,
