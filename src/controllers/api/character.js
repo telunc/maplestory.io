@@ -4,8 +4,33 @@ import Promise from 'bluebird'
 import API from '../../lib/API'
 import Character from '../../models/character'
 import rp from 'request-promise'
+import apicache from 'apicache'
+import redis from 'redis'
+import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../../environment'
 
 const router = express.Router()
+
+let redisClient
+if (REDIS_HOST && REDIS_PORT) {
+  redisClient = redis.createClient({
+    host: REDIS_HOST,
+    port: REDIS_PORT
+  })
+  console.warn('Redis caching enabled')
+} else {
+  console.warn('Redis not enabled')
+}
+
+const caching = apicache.options({
+    debug: ENV.NODE_ENV == 'development',
+    defaultDuration: 43200000,
+    enabled: true,
+    redisClient
+  }).middleware
+
+//Try to cache the results for at least 12 hours as CPU is also costly
+router.use(caching())
+
 
 API.registerCall(
   '/api/character/:characterName',
