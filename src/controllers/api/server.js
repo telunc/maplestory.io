@@ -50,8 +50,8 @@ API.registerCall(
 router.get('/:worldId', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
-    const world = await Server.findServer(Number(worldId))
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    const world = await Server.findServer(worldId)
     res.send(world)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
@@ -91,8 +91,8 @@ API.registerCall(
 router.get('/:worldId/market/itemCount', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
-    const itemCount = await Item.getCount({server: Number(worldId)})
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    const itemCount = await Item.getCount({server: worldId})
     res.send(itemCount.toString())
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
@@ -151,7 +151,7 @@ API.registerCall(
 router.get('/:worldId/market/legacy', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const rooms = await Room.findRooms(worldId)
     var mostRecentTimestamp = 0
     const items = rooms.reduce(function (allItems, room) {
@@ -251,7 +251,7 @@ API.registerCall(
 router.get('/:worldId/market/rooms', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const rooms = await Room.findRooms(worldId)
     res.success(rooms)
   }catch(ex){
@@ -282,9 +282,9 @@ API.registerCall(
 router.get('/:worldId/market/room/:roomId', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const roomId = Number(req.params.roomId)
-    if (roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
+    if (Number.isNaN(roomId) || roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
     const rooms = await Room.findRoom(worldId, 1, roomId)
     res.success(rooms)
   }catch(ex){
@@ -372,9 +372,9 @@ API.registerCall(
 router.get('/:worldId/market/room/:roomId/items', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const roomId = Number(req.params.roomId)
-    if (roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
+    if (Number.isNaN(roomId) || roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
     const items = await Item.findAll({room: roomId, server: worldId})
     res.success(items)
   }catch(ex){
@@ -462,9 +462,9 @@ API.registerCall(
 router.get('/:worldId/market/items', async (req, res, next) => {
   try{
     const worldId = Number(req.params.worldId)
-    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    if (Number.isNaN(worldId) || worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const roomId = Number(req.params.roomId)
-    if (roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
+    if (Number.isNaN(roomId) || roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
     const items = await Item.findAll({server: worldId})
     res.success(items)
   }catch(ex){
