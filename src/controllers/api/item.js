@@ -29,33 +29,7 @@ const caching = apicache.options({
   }).middleware
 
 //Try to cache the results for at least 12 hours as CPU is also costly
-router.use(caching())
-
-API.registerCall(
-  '/api/item/:itemId',
-  'Gets a single item',
-  API.createParameter(':itemId', 'number', 'The ID of the item'),
-  {
-    Description: '...',
-    MetaInfo: '...',
-    TypeInfo: '...',
-    id: 1382223
-  }
-)
-
-router.get('/:itemId', async (req, res, next) => {
-  try{
-    const itemId = Number(req.params.itemId)
-    if (itemId === null || itemId === undefined) res.status(400).send({ error: 'Invalid item' })
-    const item = await MapleItem.getFirst(itemId)
-    if(!item) return res.status(404).send('Couldn\'t find that item.')
-    res.send(item)
-  }catch(ex){
-    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
-    console.log(ex, ex.stack)
-  }
-})
-
+//router.use(caching())
 
 API.registerCall(
   '/api/item/:itemId/icon',
@@ -67,6 +41,7 @@ API.registerCall(
 router.get('/:itemId/icon', async (req, res, next) => {
   try{
     const itemId = Number(req.params.itemId)
+    if (itemId === null || itemId === undefined || Number.isNaN(itemId)) return res.status(400).send({ error: 'Invalid item' })
     const item = await MapleItem.getFirst(itemId)
 
     if(!item || !item.Icon || !item.Icon.Icon) return res.status(404).send('Couldn\'t find an icon for that item.')
@@ -90,6 +65,7 @@ API.registerCall(
 router.get('/:itemId/iconRaw', async (req, res, next) => {
   try{
     const itemId = Number(req.params.itemId)
+    if (itemId === null || itemId === undefined || Number.isNaN(itemId)) return res.status(400).send({ error: 'Invalid item' })
     const item = await MapleItem.getFirst(itemId)
 
     if(!item || !item.Icon || !item.Icon.IconRaw) return res.status(404).send('Couldn\'t find an icon for that item.')
@@ -116,6 +92,31 @@ router.get('/list', async (req, res, next) => {
   try{
     const items = await MapleItem.getList()
     res.send(items)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+API.registerCall(
+  '/api/item/:itemId',
+  'Gets a single item',
+  API.createParameter(':itemId', 'number', 'The ID of the item'),
+  {
+    Description: '...',
+    MetaInfo: '...',
+    TypeInfo: '...',
+    id: 1382223
+  }
+)
+
+router.get('/:itemId', async (req, res, next) => {
+  try{
+    const itemId = Number(req.params.itemId)
+    if (itemId === null || itemId === undefined || Number.isNaN(itemId)) return res.status(400).send({ error: 'Invalid item' })
+    const item = await MapleItem.getFirst(itemId)
+    if(!item) return res.status(404).send('Couldn\'t find that item.')
+    res.send(item)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)

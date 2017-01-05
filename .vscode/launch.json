@@ -18,8 +18,8 @@
                 "NODE_ENV": "development",
                 "RETHINKDB_HOST": "127.0.0.1",
                 "RETHINKDB_PORT": "28015",
-                "RETHINKDB_USER": "",
-                "RETHINKDB_PASS": "",
+                "RETHINKDB_USER": "maplefm",
+                "RETHINKDB_PASS": "5A9Un54uF3HRErX9u9vcTh3G4qfmWvsJrzb4Jh7ZT7Ebx7JfN6Zdk7hGcBwSYHZmmXBA4mFWNDD6nYwU327qXmm8MNYnG9wPgJ4kWApWLuTn2skbEmnQLrGy6dtwaCBv",
                 "RETHINKDB_DB": "maplestory",
                 "REDIS_PORT_6379_TCP_ADDR": "127.0.0.1",
                 "REDIS_PORT_6379_TCP_PORT": "6379"
