@@ -1,7 +1,7 @@
 import express from 'express';
 import r from 'rethinkdb'
 import Promise from 'bluebird'
-import World from './api/world'
+import Server from './api/server'
 import Item from './api/item'
 import Character from './api/character'
 import compression from 'compression'
@@ -12,9 +12,9 @@ var oldRouteTest = new RegExp('\/fm\/world\/([0-9]*)\/rooms\/legacy', '')
 //Convert objects appropriately
 router.use('/', async (req, res, next) => {
   if(oldRouteTest.test(req.url)) {
-    var worldId = oldRouteTest.exec(req.url)[1]
-    console.log('Redirecting (old) legacy call for ' + worldId)
-    res.redirect('/api/world/' + worldId + '/market/legacy')
+    var serverId = oldRouteTest.exec(req.url)[1]
+    console.log('Redirecting (old) legacy call for ' + serverId)
+    res.redirect('/api/server/' + serverId + '/market/legacy')
   }
 
   res.success = (model) => {
@@ -33,7 +33,7 @@ router.use('/', async (req, res, next) => {
 //Try to compress the objects, because 5Mb per request is costly
 router.use(compression())
 
-router.use('/world', World)
+router.use('/server', Server)
 router.use('/item', Item)
 router.use('/character', Character)
 

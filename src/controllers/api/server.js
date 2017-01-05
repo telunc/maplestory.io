@@ -34,7 +34,7 @@ const caching = apicache.options({
 router.use(caching())
 
 API.registerCall(
-  '/api/world/:worldId',
+  '/api/server/:worldId',
   'Gets a statistical data of a world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   {
@@ -49,7 +49,8 @@ API.registerCall(
 )
 router.get('/:worldId', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const world = await Server.findServer(Number(worldId))
     res.send(world)
   }catch(ex){
@@ -59,7 +60,7 @@ router.get('/:worldId', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldName/icon',
+  '/api/server/:worldName/icon',
   'Gets the raw icon of a world',
   API.createParameter(':worldName', 'string', 'The ID of the item'),
   'Image/PNG'
@@ -82,14 +83,15 @@ router.get('/:worldName/icon', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldId/market/itemCount',
+  '/api/server/:worldId/market/itemCount',
   'Gets a count of items in the world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   1000000
 )
 router.get('/:worldId/market/itemCount', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const itemCount = await Item.getCount({server: Number(worldId)})
     res.send(itemCount.toString())
   }catch(ex){
@@ -99,7 +101,7 @@ router.get('/:worldId/market/itemCount', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldId/market/legacy',
+  '/api/server/:worldId/market/legacy',
   'Gets all of the items in the world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   [{
@@ -148,7 +150,8 @@ API.registerCall(
 )
 router.get('/:worldId/market/legacy', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const rooms = await Room.findRooms(worldId)
     var mostRecentTimestamp = 0
     const items = rooms.reduce(function (allItems, room) {
@@ -228,7 +231,7 @@ router.get('/:worldId/market/legacy', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldId/market/rooms',
+  '/api/server/:worldId/market/rooms',
   'Gets a list of rooms with the shops and items in a world.',
   API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
   [
@@ -247,7 +250,8 @@ API.registerCall(
 )
 router.get('/:worldId/market/rooms', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
     const rooms = await Room.findRooms(worldId)
     res.success(rooms)
   }catch(ex){
@@ -257,7 +261,7 @@ router.get('/:worldId/market/rooms', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldId/market/room/:roomId',
+  '/api/server/:worldId/market/room/:roomId',
   'Gets a list of shops and items in a specific room on a specific world.',
   [
     API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -277,8 +281,10 @@ API.registerCall(
 )
 router.get('/:worldId/market/room/:roomId', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
-    var roomId = Number(req.params.roomId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    const roomId = Number(req.params.roomId)
+    if (roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
     const rooms = await Room.findRoom(worldId, 1, roomId)
     res.success(rooms)
   }catch(ex){
@@ -288,7 +294,7 @@ router.get('/:worldId/market/room/:roomId', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldId/market/room/:roomId/items',
+  '/api/server/:worldId/market/room/:roomId/items',
   'Gets a list of items in a specific room on a specific world.',
   [
     API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -365,8 +371,10 @@ API.registerCall(
 )
 router.get('/:worldId/market/room/:roomId/items', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
-    var roomId = Number(req.params.roomId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    const roomId = Number(req.params.roomId)
+    if (roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
     const items = await Item.findAll({room: roomId, server: worldId})
     res.success(items)
   }catch(ex){
@@ -376,7 +384,7 @@ router.get('/:worldId/market/room/:roomId/items', async (req, res, next) => {
 })
 
 API.registerCall(
-  '/api/world/:worldId/market/items',
+  '/api/server/:worldId/market/items',
   'Gets a list of items in a specific room on a specific world.',
   [
     API.createParameter(':worldId', 'number', 'The ID of the world. (0 = Scania, 1 = Windia, 2 = Bera, 3 = Khroa, 4 = MYBCKN, 5 = GRAZED)'),
@@ -453,8 +461,10 @@ API.registerCall(
 )
 router.get('/:worldId/market/items', async (req, res, next) => {
   try{
-    var worldId = Number(req.params.worldId)
-    var roomId = Number(req.params.roomId)
+    const worldId = Number(req.params.worldId)
+    if (worldId === null || worldId === undefined) res.status(400).send({ error: 'Invalid world' })
+    const roomId = Number(req.params.roomId)
+    if (roomId === null || roomId === undefined) res.status(400).send({ error: 'Invalid room' })
     const items = await Item.findAll({server: worldId})
     res.success(items)
   }catch(ex){

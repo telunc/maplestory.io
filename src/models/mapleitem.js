@@ -1,8 +1,8 @@
 import r from 'rethinkdb';
 import Promise from 'bluebird'
 
-function GetItemList() {
-  return r.db('maplestory').table('items').map(function (item) {
+function GetItemList(filter) {
+  return r.db('maplestory').table('items').filter(filter || {}).map(function (item) {
     return {id: item('Description')('Id'), name: item('Description')('Name')}
   })
 }
@@ -90,9 +90,15 @@ export default class MapleItem {
     return fullItems.map(entry => new MapleItem(entry)).shift()
   }
 
-  static async getList() {
+  static async getList(includeHair) {
     const connection = await Connect()
-    const cursor = await GetItemList().run(connection)
+
+    var filter = function (item) { return item('id').lt(20000).or(item('id').gt(43000)) }
+    if (includeHair) {
+      filter = {}
+    }
+
+    const cursor = await GetItemList(filter).run(connection)
     const fullItems = await cursor.toArray()
     connection.close()
     return fullItems

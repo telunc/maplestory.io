@@ -32,6 +32,32 @@ const caching = apicache.options({
 router.use(caching())
 
 API.registerCall(
+  '/api/item/:itemId',
+  'Gets a single item',
+  API.createParameter(':itemId', 'number', 'The ID of the item'),
+  {
+    Description: '...',
+    MetaInfo: '...',
+    TypeInfo: '...',
+    id: 1382223
+  }
+)
+
+router.get('/:itemId', async (req, res, next) => {
+  try{
+    const itemId = Number(req.params.itemId)
+    if (itemId === null || itemId === undefined) res.status(400).send({ error: 'Invalid item' })
+    const item = await MapleItem.getFirst(itemId)
+    if(!item) return res.status(404).send('Couldn\'t find that item.')
+    res.send(item)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+
+API.registerCall(
   '/api/item/:itemId/icon',
   'Gets the inventory icon of an item',
   API.createParameter(':itemId', 'number', 'The ID of the item'),
