@@ -18,10 +18,15 @@ router.use('/', async (req, res, next) => {
   }
 
   res.success = (model) => {
+    let results = null
     if(model instanceof Array)
-      return res.status(200).send(model.map((entry) => entry.toJSON ? entry.toJSON() : entry ))
+      results = model.map((entry) => entry.toJSON ? entry.toJSON() : entry )
+    else
+      results = model.toJSON ? model.toJSON() : model
 
-    res.status(200).send(model.toJSON ? model.toJSON() : model)
+    res.set('Content-Type', 'application/json')
+      .status(200)
+      .send(JSON.stringify(results, null, 2))
   }
 
   res.header('Access-Control-Allow-Origin', '*');

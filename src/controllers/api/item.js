@@ -16,9 +16,9 @@ if (REDIS_HOST && REDIS_PORT) {
     host: REDIS_HOST,
     port: REDIS_PORT
   })
-  console.warn('Redis caching enabled')
+  console.warn('Item - Redis caching enabled')
 } else {
-  console.warn('Redis not enabled')
+  console.warn('Item - Redis not enabled')
 }
 
 const caching = apicache.options({
@@ -48,7 +48,7 @@ router.get('/:itemId/icon', async (req, res, next) => {
 
     const iconData = new Buffer(item.Icon.Icon, 'base64')
     res.set('Content-Type', 'image/png')
-    res.send(iconData)
+      .send(iconData)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
@@ -72,7 +72,7 @@ router.get('/:itemId/iconRaw', async (req, res, next) => {
 
     const iconData = new Buffer(item.Icon.IconRaw, 'base64')
     res.set('Content-Type', 'image/png')
-    res.send(iconData)
+      .send(iconData)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
@@ -91,7 +91,7 @@ API.registerCall(
 router.get('/list', async (req, res, next) => {
   try{
     const items = await MapleItem.getList()
-    res.send(items)
+    res.success(items)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
@@ -116,7 +116,7 @@ router.get('/:itemId', async (req, res, next) => {
     if (itemId === null || itemId === undefined || Number.isNaN(itemId)) return res.status(400).send({ error: 'Invalid item' })
     const item = await MapleItem.getFirst(itemId)
     if(!item) return res.status(404).send('Couldn\'t find that item.')
-    res.send(item)
+    res.success(item)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)

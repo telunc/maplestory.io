@@ -16,9 +16,9 @@ if (REDIS_HOST && REDIS_PORT) {
     host: REDIS_HOST,
     port: REDIS_PORT
   })
-  console.warn('Redis caching enabled')
+  console.warn('Character - Redis caching enabled')
 } else {
-  console.warn('Redis not enabled')
+  console.warn('Character - Redis not enabled')
 }
 
 const caching = apicache.options({
@@ -58,7 +58,7 @@ router.get('/:characterName', async (req, res, next) => {
     const character = await Character.GetCharacter(characterName, ranking)
     if (!character) return res.status(404).send({ error: 'Could not find character' })
 
-    res.send(character)
+    res.success(character)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
     console.log(ex, ex.stack)
@@ -74,7 +74,7 @@ API.registerCall(
     'job':'Magician',
     'ranking':1,
     'world':'Khaini',
-    'level':2377,
+    'fame':2377,
     'rankMovement':1,
     'rankDirection':'up',
     'avatar':'/api/character/SomePerson123/avatar',
@@ -85,12 +85,15 @@ API.registerCall(
 
 router.get('/:characterName/fame', async (req, res, next) => {
   try{
-    const ranking = 'fame'
     const characterName = req.params.characterName
-    const character = await Character.GetCharacter(characterName, ranking)
+    let character = await Character.GetCharacter(characterName, 'fame')
     if (!character) return res.status(404).send({ error: 'Could not find character' })
 
-    res.send(character)
+    character.fame = character.level
+    delete character.level
+    delete character.exp
+
+    res.success(character)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
     console.log(ex, ex.stack)
@@ -115,7 +118,7 @@ router.get('/:characterName/avatar', async (req, res, next) => {
   const avatarData = character.avatarData.substr(base64Location + 7)
   const characterAvatar = new Buffer(avatarData, 'base64')
   res.set('Content-Type', type)
-  res.send(characterAvatar)
+    .send(characterAvatar)
 })
 
 export default router

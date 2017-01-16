@@ -18,9 +18,9 @@ if (REDIS_HOST && REDIS_PORT) {
     host: REDIS_HOST,
     port: REDIS_PORT
   })
-  console.warn('Redis caching enabled')
+  console.warn('Server - Redis caching enabled')
 } else {
-  console.warn('Redis not enabled')
+  console.warn('Server - Redis not enabled')
 }
 
 const caching = apicache.options({
@@ -52,7 +52,7 @@ router.get('/:worldId', async (req, res, next) => {
     const worldId = Number(req.params.worldId)
     if (Number.isNaN(worldId) || worldId === null || worldId === undefined) return res.status(400).send({ error: 'Invalid world' })
     const world = await Server.findServer(worldId)
-    res.send(world)
+    res.success(world)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
@@ -75,7 +75,7 @@ router.get('/:worldName/icon', async (req, res, next) => {
 
     const iconData = new Buffer(world.icon, 'base64')
     res.set('Content-Type', 'image/png')
-    res.send(iconData)
+      .success(iconData)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
@@ -93,7 +93,7 @@ router.get('/:worldId/market/itemCount', async (req, res, next) => {
     const worldId = Number(req.params.worldId)
     if (Number.isNaN(worldId) || worldId === null || worldId === undefined) return res.status(400).send({ error: 'Invalid world' })
     const itemCount = await Item.getCount({server: worldId})
-    res.send(itemCount.toString())
+    res.success(itemCount.toString())
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
