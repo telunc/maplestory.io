@@ -88,7 +88,7 @@ export default class Item {
       shop: this.shop,
       chair: this.chair,
       description: this.description,
-      ItemId: this.ItemId,
+      itemId: this.itemId,
       name: this.name,
       slot: this.slot,
       acc: this.acc,

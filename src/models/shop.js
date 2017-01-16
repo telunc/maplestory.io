@@ -91,27 +91,27 @@ export default class Shop {
     return this._data.items.map(item => new Item(item))
   }
 
-    /**
-     * @param {object} filter The rethinkdb compatible filter object to use for the query.
-     */
-    static async findAll(filter){
-        const connection = await Connect()
-        const cursor = await GetShops(filter).run(connection)
-        const fullItems = await cursor.toArray()
-        connection.close()
-        console.log('Querying for: ', filter, 'returned:', fullItems.length)
-        return fullItems.map(entry => new Item(entry))
-    }
+  /**
+   * @param {object} filter The rethinkdb compatible filter object to use for the query.
+   */
+  static async findAll(filter){
+      const connection = await Connect()
+      const cursor = await GetShops(filter).run(connection)
+      const fullItems = await cursor.toArray()
+      connection.close()
+      console.log('Querying for: ', filter, 'returned:', fullItems.length)
+      return fullItems.map(entry => new Item(entry))
+  }
 
-    /**
-     * @param {object} filter The rethinkdb compatible filter object to use for the query.
-     */
-    static async findFirst(filter){
-        const connection = await Connect()
-        const cursor = await GetShops(filter).limit(1).run(connection)
-        const fullItems = await cursor.toArray()
-        connection.close()
-        console.log('Querying for: ', filter, 'returned:', fullItems.length)
-        return fullItems.map(entry => new Item(entry)).shift()
-    }
+  /**
+   * @param {object} filter The rethinkdb compatible filter object to use for the query.
+   */
+  static async findFirst(filter){
+      const connection = await Connect()
+      const cursor = await GetShops(filter).limit(1).run(connection)
+      const fullItems = await cursor.toArray()
+      connection.close()
+      console.log('Querying for: ', filter, 'returned:', fullItems.length)
+      return fullItems.map(entry => new Item(entry)).shift()
+  }
 }
