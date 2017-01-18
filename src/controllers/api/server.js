@@ -75,7 +75,8 @@ router.get('/:worldName/icon', async (req, res, next) => {
 
     const iconData = new Buffer(world.icon, 'base64')
     res.set('Content-Type', 'image/png')
-      .success(iconData)
+      .status(200)
+      .send(iconData)
   }catch(ex){
     res.status(500).send({error: ex.message || ex, trace: ex.trace || null, stack: ex.stack || null})
     console.log(ex, ex.stack)
