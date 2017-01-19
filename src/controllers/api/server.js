@@ -31,7 +31,6 @@ const caching = apicache.options({
   }).middleware
 
   //Try to cache the results for at least 60 seconds as CPU is also costly
-router.use(caching())
 
 API.registerCall(
   '/api/server/:worldId',
@@ -203,12 +202,12 @@ router.get('/:worldId/market/legacy', async (req, res, next) => {
             e: room.room,
             f: shop.shopName,
             g: shop.characterName,
-            I: item.potentials[0] ? item.potentials[0].line : undefined,
-            J: item.potentials[1] ? item.potentials[1].line : undefined,
-            K: item.potentials[2] ? item.potentials[2].line : undefined,
-            L: item.potentials[3] ? item.potentials[3].line : undefined,
-            M: item.potentials[4] ? item.potentials[4].line : undefined,
-            N: item.potentials[5] ? item.potentials[5].line : undefined,
+            I: item.potentials ? (item.potentials[0] ? item.potentials[0].line : undefined) : undefined,
+            J: item.potentials ? (item.potentials[1] ? item.potentials[1].line : undefined) : undefined,
+            K: item.potentials ? (item.potentials[2] ? item.potentials[2].line : undefined) : undefined,
+            L: item.potentials ? (item.potentials[3] ? item.potentials[3].line : undefined) : undefined,
+            M: item.potentials ? (item.potentials[4] ? item.potentials[4].line : undefined) : undefined,
+            N: item.potentials ? (item.potentials[5] ? item.potentials[5].line : undefined) : undefined,
             Y: item.isCash
           }
 
