@@ -43,6 +43,7 @@ function GetItems(filter){
           r.expr({
             potentialLines: r.branch(item('left')('potentials'),
               r.db('maplestory').table('potentialLevels').getAll(r.args(item('left')('potentials')), {index: 'PotentialId'})
+                .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
                 .eqJoin('PotentialId', r.db('maplestory').table('potentials'))
                 .zip()
                 .without('Level', 'PotentialId', 'RequiredLevel')

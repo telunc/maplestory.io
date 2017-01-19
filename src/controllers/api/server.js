@@ -203,12 +203,12 @@ router.get('/:worldId/market/legacy', async (req, res, next) => {
             e: room.room,
             f: shop.shopName,
             g: shop.characterName,
-            I: item.potential1 ? item.potential1.line : undefined,
-            J: item.potential2 ? item.potential2.line : undefined,
-            K: item.potential3 ? item.potential3.line : undefined,
-            L: item.bpotential1 ? item.bpotential1.line : undefined,
-            M: item.bpotential2 ? item.bpotential2.line : undefined,
-            N: item.bpotential3 ? item.bpotential3.line : undefined,
+            I: item.potentials[0] ? item.potentials[0].line : undefined,
+            J: item.potentials[1] ? item.potentials[1].line : undefined,
+            K: item.potentials[2] ? item.potentials[2].line : undefined,
+            L: item.potentials[3] ? item.potentials[3].line : undefined,
+            M: item.potentials[4] ? item.potentials[4].line : undefined,
+            N: item.potentials[5] ? item.potentials[5].line : undefined,
             Y: item.isCash
           }
 
