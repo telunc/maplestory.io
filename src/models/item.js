@@ -46,7 +46,7 @@ function GetItems(filter){
                 .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
                 .eqJoin('PotentialId', r.db('maplestory').table('potentials'))
                 .zip()
-                .without('Level', 'PotentialId', 'RequiredLevel')
+                .without('Level', 'RequiredLevel')
                 .coerceTo('array'),
               r.expr([])
             )
@@ -75,6 +75,8 @@ export default class Item {
 
     if(this.potentials) {
       this.potentials.forEach((potential) => {
+        if (!potential) return
+
         potential.line = potential.Message
         potential.Modifiers.forEach(modifier => {
           potential.line = potential.line.replace(`#${modifier.Item1}`, modifier.Item2)
@@ -316,7 +318,11 @@ export default class Item {
   }
 
   get potentials(){
-    return this._data.potentialLines
+    return this._data.potentials.map(potential => {
+      return this._data.potentialLines.find(potentialLine => {
+        return potentialLine.id === potential
+      })
+    })
   }
 
   get price(){
