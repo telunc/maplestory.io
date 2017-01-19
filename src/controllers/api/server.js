@@ -31,6 +31,7 @@ const caching = apicache.options({
   }).middleware
 
   //Try to cache the results for at least 60 seconds as CPU is also costly
+router.use(caching())
 
 API.registerCall(
   '/api/server/:worldId',
