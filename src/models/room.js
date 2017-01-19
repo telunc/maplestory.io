@@ -36,17 +36,22 @@ function GetRooms(filter){
               .merge(item('right')('Description'))
               .merge(r.branch(item('right')('TypeInfo'), item('right')('TypeInfo'), {'Category': 'Unknown', 'OverallCategory': 'Unknown', 'SubCategory': 'Unknown'}))
               .merge(item('right')('MetaInfo').without('Icon'))
-              .merge(r.branch(item('right')('MetaInfo')('Equip'), r.expr({potentials: r.expr([
-                  {'PotentialId': item('left')('potential1').coerceTo('number'), target: 'potential1'},
-                  {'PotentialId': item('left')('potential2').coerceTo('number'), target: 'potential2'},
-                  {'PotentialId': item('left')('potential3').coerceTo('number'), target: 'potential3'},
-                  {'PotentialId': item('left')('bpotential1').coerceTo('number'), target: 'bpotential1'},
-                  {'PotentialId': item('left')('bpotential2').coerceTo('number'), target: 'bpotential2'},
-                  {'PotentialId': item('left')('bpotential3').coerceTo('number'), target: 'bpotential3'}
-              ]).eqJoin('PotentialId', r.db('maplestory').table('potentialLevels'), {index: 'PotentialId'}).zip()
-                .filter({Level: r.branch(item('right')('MetaInfo')('Equip')('reqLevel'), item('right')('MetaInfo')('Equip')('reqLevel'), 1).coerceTo('number').add(9).div(10).floor()})
-                .eqJoin('PotentialId', r.db('maplestory').table('potentials')).zip().without('Level', 'PotentialId', 'RequiredLevel')}), {}))
-          }).without('unk1', 'unk2', 'unk3', 'unk4', 'unk5', 'unk6', 'unk7', 'unk8', 'WZFile', 'WZFolder', 'bpotential1Level', 'bpotential2Level', 'bpotential3Level', 'potential1Level', 'potential2Level', 'potential3Level', 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
+              .merge(
+                r.branch(
+                  item('right')('MetaInfo')('Equip'),
+                  r.expr({
+                    potentialLines: r.branch(item('left')('potentials'),
+                      r.db('maplestory').table('potentialLevels').getAll(r.args(item('left')('potentials')), {index: 'PotentialId'})
+                        .eqJoin('PotentialId', r.db('maplestory').table('potentials'))
+                        .zip()
+                        .without('Level', 'PotentialId', 'RequiredLevel')
+                        .coerceTo('array'),
+                      r.expr([])
+                    )
+                  }), {}
+                )
+              ).without('unk1', 'unk2', 'unk3', 'unk4', 'unk5', 'unk6', 'unk7', 'unk8', 'WZFile', 'WZFolder', 'bpotential1Level', 'bpotential2Level', 'bpotential3Level', 'potential1Level', 'potential2Level', 'potential3Level', 'potential1', 'potential2', 'potential3', 'bpotential1', 'bpotential2', 'bpotential3')
+          })
         }
       })
     }
