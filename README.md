@@ -9,7 +9,7 @@ To properly set up MapleStory.io, you will need to run the following commands.
 2. ```npm start```
 
 ### Contributing
-Please take a moment to read through our [Contribution Guide](maplestory.io/CONTRIBUTING.md) before making an issue, creating a feature request, or contributing pull requests.
+Please take a moment to read through our [Contribution Guide](CONTRIBUTING.md) before making an issue, creating a feature request, or contributing pull requests.
 
 ### Any other questions?
 Feel free to reach out to us by [email](mailto:hello@crr.io).
