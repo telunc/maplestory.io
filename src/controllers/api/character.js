@@ -31,6 +31,7 @@ const caching = apicache.options({
 //Try to cache the results for at least 12 hours as CPU is also costly
 router.use(caching())
 
+// OVERALL
 
 API.registerCall(
   '/api/character/:characterName',
@@ -54,8 +55,9 @@ API.registerCall(
 router.get('/:characterName', async (req, res, next) => {
   try{
     const ranking = 'overall'
+    const attribute = 'legendary'
     const characterName = req.params.characterName
-    const character = await Character.GetCharacter(characterName, ranking)
+    const character = await Character.GetCharacter(characterName, ranking, attribute)
     if (!character) return res.status(404).send({ error: 'Could not find character' })
 
     res.success(character)
@@ -64,6 +66,91 @@ router.get('/:characterName', async (req, res, next) => {
     console.log(ex, ex.stack)
   }
 })
+
+// WORLD
+
+API.registerCall(
+  '/api/character/world/:worldName/:characterName',
+  'Gets the ranking information of a character',
+  API.createParameter(':characterName', 'string', 'The name of the player to look up'),
+  {
+    'name':'SomePerson123',
+    'job':'Magician',
+    'ranking':1,
+    'world':'Khaini',
+    'level':255,
+    'exp':4339186,
+    'rankMovement':1,
+    'rankDirection':'up',
+    'avatar':'/api/character/SomePerson123/avatar',
+    'got':'2016-10-05T04:48:21.537Z',
+    'avatarData':'data:image/png;base64,'
+  }
+)
+
+router.get('/world/:worldName/:characterName', async (req, res, next) => {
+  try{
+    const ranking = 'world'
+    const attribute = req.params.worldName
+    const characterName = req.params.characterName
+    const character = await Character.GetCharacter(characterName, ranking, attribute)
+    if (!character) return res.status(404).send({ error: 'Could not find character' })
+
+    res.success(character)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+// JOB
+
+API.registerCall(
+  '/api/character/job/:jobName/:characterName',
+  'Gets the ranking information of a character',
+  API.createParameter(':characterName', 'string', 'The name of the player to look up'),
+  {
+    'name':'SomePerson123',
+    'job':'Magician',
+    'ranking':1,
+    'world':'Khaini',
+    'level':255,
+    'exp':4339186,
+    'rankMovement':1,
+    'rankDirection':'up',
+    'avatar':'/api/character/SomePerson123/avatar',
+    'got':'2016-10-05T04:48:21.537Z',
+    'avatarData':'data:image/png;base64,'
+  }
+)
+
+router.get('/job/:jobName/:characterName', async (req, res, next) => {
+  try{
+    const ranking = 'job'
+    var jobName = req.params.jobName
+    var catName = req.params.jobName
+    if (jobName === 'Dual Blade'){jobName = 'Thief'}
+    const explorer = ['Beginner','Warrior','Magician','Bowman','Thief']
+    const cygnus = ['Noblesse','Dawn Warrior','Blaze Wizard','Wind Archer','Night Walker','Thunder Breaker']
+    const resistance = ['Citizen','Demon Slayer','Battle Mage','Wild Hunter','Mechanic']
+    const sengoku = ['Hayato','Kanna']
+    if (jobName in explorer){catName='explorer'} 
+    else if (jobName in cygnus){catName='cygnus-knights'}
+    else if (jobName in resistance){catName='resistance'}
+    else if (jobName in sengoku){catName='sengoku'}
+    const attribute = catName + '/'+ jobName
+    const characterName = req.params.characterName
+    const character = await Character.GetCharacter(characterName, ranking, attribute)
+    if (!character) return res.status(404).send({ error: 'Could not find character' })
+
+    res.success(character)
+  }catch(ex){
+    res.status(500).send({error: ex.message || ex, trace: ex.trace || null})
+    console.log(ex, ex.stack)
+  }
+})
+
+// Fame
 
 API.registerCall(
   '/api/character/:characterName/fame',
@@ -100,6 +187,8 @@ router.get('/:characterName/fame', async (req, res, next) => {
   }
 })
 
+// AVATAR
+
 API.registerCall(
   '/api/character/:characterName/avatar',
   'Gets the avatar of a character',
@@ -109,8 +198,9 @@ API.registerCall(
 
 router.get('/:characterName/avatar', async (req, res, next) => {
   const ranking = 'overall'
+  const attribute = 'legendary'
   const characterName = req.params.characterName
-  const character = await Character.GetCharacter(characterName, ranking, true)
+  const character = await Character.GetCharacter(characterName, ranking, attribute,true)
   if (!character) return res.status(404).send({ error: 'Could not find character' })
 
   const base64Location = character.avatarData.indexOf('base64,')

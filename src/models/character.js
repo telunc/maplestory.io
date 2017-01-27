@@ -11,7 +11,7 @@ export default class Character {
     this._data = rethinkData;
   }
 
-  static async GetCharacter(characterName, ranking, showRealAvatar) {
+  static async GetCharacter(characterName, ranking, attribute,showRealAvatar) {
     console.log(characterName)
     if (redisCache) {
       const cachedCharacter = await redisCache.getAsync(getCacheName(ranking, characterName))
@@ -23,7 +23,7 @@ export default class Character {
     console.log(`${getCacheName(ranking, characterName)} cache miss`)
 
     const options = {
-      uri: `http://maplestory.nexon.net/rankings/${ranking}-ranking/legendary?pageIndex=1&character_name=${characterName}&search=true`,
+      uri: `http://maplestory.nexon.net/rankings/${ranking}-ranking/${attribute}?pageIndex=1&character_name=${characterName}&search=true`,
     }
 
     let rankingListing = await retryRequest(options, 5, `Something happened getting rankings for ${characterName}`)
