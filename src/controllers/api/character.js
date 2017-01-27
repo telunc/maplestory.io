@@ -132,10 +132,12 @@ router.get('/job/:jobName/:characterName', async (req, res, next) => {
     if (jobName === 'Dual Blade'){jobName = 'Thief'}
     const explorer = ['Beginner','Warrior','Magician','Bowman','Thief']
     const cygnus = ['Noblesse','Dawn Warrior','Blaze Wizard','Wind Archer','Night Walker','Thunder Breaker']
+    const aran = ['Legend','Aran']
     const resistance = ['Citizen','Demon Slayer','Battle Mage','Wild Hunter','Mechanic']
     const sengoku = ['Hayato','Kanna']
     if (jobName in explorer){catName='explorer'} 
     else if (jobName in cygnus){catName='cygnus-knights'}
+    else if (jobName in aran){catName='aran'}
     else if (jobName in resistance){catName='resistance'}
     else if (jobName in sengoku){catName='sengoku'}
     const attribute = catName + '/'+ jobName
