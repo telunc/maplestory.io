@@ -70,7 +70,7 @@ router.get('/:characterName', async (req, res, next) => {
 // WORLD
 
 API.registerCall(
-  '/api/character/world/:worldName/:characterName',
+  '/api/character/:characterName/world/:worldName',
   'Gets the ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   {
@@ -88,7 +88,7 @@ API.registerCall(
   }
 )
 
-router.get('/world/:worldName/:characterName', async (req, res, next) => {
+router.get('/:characterName/world/:worldName', async (req, res, next) => {
   try{
     const ranking = 'world'
     const attribute = req.params.worldName
@@ -106,7 +106,7 @@ router.get('/world/:worldName/:characterName', async (req, res, next) => {
 // JOB
 
 API.registerCall(
-  '/api/character/job/:jobName/:characterName',
+  '/api/character/:characterName/job/:jobName/',
   'Gets the ranking information of a character',
   API.createParameter(':characterName', 'string', 'The name of the player to look up'),
   {
@@ -124,7 +124,7 @@ API.registerCall(
   }
 )
 
-router.get('/job/:jobName/:characterName', async (req, res, next) => {
+router.get('/:characterName/job/:jobName/', async (req, res, next) => {
   try{
     const ranking = 'job'
     var jobName = req.params.jobName
