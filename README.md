@@ -6,7 +6,8 @@
 To properly set up MapleStory.io, you will need to run the following commands.
 
 1. ```npm install```
-2. ```npm start```
+2. ```npm run compile```
+3. ```npm start```
 
 ### Contributing
 Please take a moment to read through our [Contribution Guide](CONTRIBUTING.md) before making an issue, creating a feature request, or contributing pull requests.
