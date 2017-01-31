@@ -75,6 +75,6 @@
     "rethinkdb": "^2.3.1",
     "socket.io": "1.4.6",
     "source-map-support": "^0.4.0",
-    "npm install html-entities":"1.2.0"
+    "html-entities":"1.2.0"
   }
 }
