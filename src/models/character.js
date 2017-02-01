@@ -5,6 +5,8 @@ import cacheManager from 'cache-manager'
 import redisStore from 'cache-manager-redis'
 import { ENV, PORT, DATADOG_API_KEY, DATADOG_APP_KEY, REDIS_HOST, REDIS_PORT } from '../environment'
 import FileSystem from 'fs'
+var Entities = require('html-entities').XmlEntities;
+var entities = new Entities()
 
 export default class Character {
   constructor(rethinkData){
@@ -12,7 +14,7 @@ export default class Character {
   }
 
   static async GetCharacter(characterName, ranking, attribute,showRealAvatar) {
-    console.log(characterName)
+    var characterName = encodeURIComponent(characterName)
     if (redisCache) {
       const cachedCharacter = await redisCache.getAsync(getCacheName(ranking, characterName))
       if (cachedCharacter) {
@@ -86,8 +88,7 @@ export default class Character {
         return redisCache.set(getCacheName(ranking, character.name), character)
       }))
     }
-
-    return characters.find((character) => character.name.toLowerCase() == characterName.toLowerCase())
+    return characters.find((character) => encodeURIComponent(entities.decode(character.name)).toLowerCase() == characterName.toLowerCase())
   }
 }
 
