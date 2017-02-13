@@ -63,7 +63,7 @@ export default class Character {
       }
 
       characters.push({
-        name: characterName,
+        name: entities.decode(characterName),
         job: jobName,
         ranking: Number(rank),
         world: world,
@@ -88,7 +88,7 @@ export default class Character {
         return redisCache.set(getCacheName(ranking, character.name), character)
       }))
     }
-    return characters.find((character) => encodeURIComponent(entities.decode(character.name)).toLowerCase() == characterName.toLowerCase())
+    return characters.find((character) => encodeURIComponent(character.name).toLowerCase() == characterName.toLowerCase())
   }
 }
 
