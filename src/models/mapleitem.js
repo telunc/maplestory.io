@@ -93,7 +93,7 @@ export default class MapleItem {
   static async getList(includeHair) {
     const connection = await Connect()
 
-    var filter = function (item) { return item('id').lt(20000).or(item('id').gt(43000)) }
+    var filter = function (item) { return item('Description').and(item('id').lt(20000).or(item('id').gt(43000))) }
     if (includeHair) {
       filter = {}
     }
